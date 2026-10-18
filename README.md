@@ -56,4 +56,4 @@ npm run test:e2e
 
 `npm run build:pages` создаёт `dist-pages` с базовым путём `/physics/` и отдельными входами `/geo/`, `/ksk/`, `/cabinet/`, `/privacy/`. `npm run test:pages` проверяет такую сборку на настольном и мобильном экране. Обычная `npm run build` создаёт полную серверную сборку без тестового режима.
 
-Workflow `.github/workflows/ci.yml` на push в `main` проверяет сервер, обе сборки и браузерные сценарии, затем публикует проверенный артефакт через GitHub Pages. В pull request выполняются только проверки.
+Workflow `.github/workflows/ci.yml` проверяет `main` и `sgt-design-preview`. Публикация проверенного артефакта выполняется только из `sgt-design-preview`: эта ветка разрешена действующей политикой окружения `github-pages`. После изменений в `main` объедините их с `sgt-design-preview` и отправьте эту ветку в GitHub. В pull request выполняются только проверки.

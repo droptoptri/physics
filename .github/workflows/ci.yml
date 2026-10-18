@@ -1,7 +1,7 @@
 name: Test and publish website
 on:
   push:
-    branches: [main]
+    branches: [main, sgt-design-preview]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -27,12 +27,12 @@ jobs:
       - run: npm run test:e2e
       - run: npm run test:pages
       - name: Upload tested Pages build
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/sgt-design-preview'
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist-pages
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/sgt-design-preview'
     needs: test
     runs-on: ubuntu-latest
     permissions:
