@@ -1,0 +1,11 @@
+{
+  "name": "СГТ-Холдинг — тестирование",
+  "build": { "dockerfile": "Dockerfile" },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": { "label": "СГТ-Холдинг", "onAutoForward": "openBrowser" }
+  },
+  "postCreateCommand": "npm ci --cache /tmp/sgt-npm-cache --no-audit --no-fund && npm run build",
+  "postStartCommand": "nohup npm run dev > /tmp/sgt-dev.log 2>&1 &",
+  "remoteUser": "node"
+}

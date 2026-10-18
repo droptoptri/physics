@@ -1,0 +1,60 @@
+import { test, expect } from '@playwright/test'
+import { readFileSync } from 'node:fs'
+
+test('Pages entry, navigation, direct routes and files work below the repository path', async ({ page, isMobile, request }) => {
+  const failures: string[] = []
+  page.on('pageerror', error => failures.push(error.message))
+  await page.goto('/physics/')
+  await expect(page.getByRole('note')).toContainText('Тестовая версия')
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Объединяем')
+  expect(await page.locator('.logo img').evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBeTruthy()
+  if (isMobile) await page.getByRole('button', { name: 'Открыть меню' }).click()
+  await page.getByRole('navigation', { name: 'Основная навигация' }).getByRole('link', { name: 'СГТ — ГЕО' }).click()
+  await expect(page.getByRole('heading', { name: 'Смотрим глубже. Видим возможности.' })).toBeInViewport()
+  await page.getByRole('button', { name: 'Дистанционные исследования' }).click()
+  await expect(page.getByText('От общей картины — к перспективным зонам')).toBeVisible()
+  for (const route of ['geo/', 'ksk/', 'privacy/', 'cabinet/']) expect((await request.get(`/physics/${route}`)).ok()).toBeTruthy()
+  const questionnaire = await request.get('/physics/documents/sgt-partner-questionnaire.docx')
+  expect(questionnaire.ok()).toBeTruthy()
+  expect((await questionnaire.body()).length).toBe(readFileSync('public/documents/sgt-partner-questionnaire.docx').length)
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy()
+  expect(failures).toEqual([])
+})
+
+test('test form validates locally and does not send the file, application or password', async ({ page }) => {
+  const apiRequests: string[] = []
+  page.on('request', request => { if (request.url().includes('/api/')) apiRequests.push(request.url()) })
+  await page.goto('/physics/')
+  await page.getByRole('button', { name: 'Стать партнёром' }).first().click()
+  const dialog = page.getByRole('dialog')
+  await dialog.getByLabel('Компания').fill('Демо компания')
+  await dialog.getByLabel('Контактное лицо').fill('Демо Партнёр')
+  await dialog.getByLabel('Электронная почта').fill('demo@example.com')
+  await dialog.locator('input[type=file]').setInputFiles('public/documents/sgt-partner-questionnaire.docx')
+  await dialog.getByRole('checkbox').check()
+  await dialog.getByRole('button', { name: 'Проверить форму' }).click()
+  await expect(dialog.getByRole('heading')).toContainText('Форма заполнена корректно')
+  await expect(dialog.getByText(/Заявка не отправлялась/)).toBeVisible()
+  expect(apiRequests).toEqual([])
+})
+
+test('demo cabinet opens without registration and supports search, filters, details and logout', async ({ page }) => {
+  const apiRequests: string[] = []
+  page.on('request', request => { if (request.url().includes('/api/')) apiRequests.push(request.url()) })
+  await page.goto('/physics/cabinet/')
+  await page.getByRole('button', { name: 'Посмотреть демо-кабинет' }).click()
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Партнёр')
+  await expect(page.getByRole('status')).toContainText('вымышлены')
+  await page.getByLabel('Поиск по тендерам').fill('нет такого проекта')
+  await expect(page.getByRole('heading', { name: 'Ничего не нашлось' })).toBeVisible()
+  await page.getByRole('button', { name: 'Сбросить фильтры' }).click()
+  await page.getByLabel('Направление тендера').selectOption('Инженерные системы')
+  await page.getByRole('button', { name: 'Демо · Развитие инженерной инфраструктуры' }).click()
+  await expect(page.getByText(/Реальные предложения доступны только/)).toBeVisible()
+  await page.getByRole('link', { name: 'Обсудить участие' }).click()
+  await expect(page.getByRole('status')).toContainText('Отклики в тестовой версии не отправляются')
+  await page.getByRole('button', { name: 'Выйти' }).click()
+  await expect(page.getByRole('button', { name: 'Посмотреть демо-кабинет' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Войти в кабинет' })).toBeDisabled()
+  expect(apiRequests).toEqual([])
+})
