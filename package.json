@@ -15,7 +15,9 @@
     "typecheck": "tsc -b",
     "admin": "node --env-file-if-exists=.env scripts/admin.mjs",
     "build:pages": "tsc -b && vite build --mode pages && node scripts/prepare-pages.mjs",
-    "test:pages": "playwright test --config=playwright.pages.config.ts"
+    "test:pages": "playwright test --config=playwright.pages.config.ts",
+    "build:host0": "npm run build && node scripts/prepare-host0.mjs",
+    "test:host0": "node scripts/test-host0.mjs"
   },
   "dependencies": {
     "@fontsource/manrope": "^5.2.8",
