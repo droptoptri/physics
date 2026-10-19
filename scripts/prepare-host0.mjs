@@ -11,6 +11,7 @@ cpSync('hosting/php/vendor',`${destination}/sgt-private/vendor`,{recursive:true}
 cpSync('hosting/php/composer.lock',`${destination}/sgt-private/composer.lock`)
 cpSync('hosting/php/tests/router.php',`${destination}/router.php`)
 cpSync('docs/REG-RU.md',`${destination}/ИНСТРУКЦИЯ.md`)
+cpSync('docs/MAIL.md',`${destination}/MAIL.md`)
 writeFileSync(`${destination}/README.txt`,'Сайт для sgt-h.ru, REG.RU Хост-0.\n\nСодержимое sgt-h.ru загрузите в корень сайта sgt-h.ru, включая .htaccess и .user.ini.\nПапку sgt-private разместите РЯДОМ с папкой сайта, за пределами его корня.\nНЕ загружайте sgt-private внутрь public.\nСоздайте в sgt-private файл install-password.txt со своим уникальным паролем от 20 символов, затем откройте https://sgt-h.ru/setup.\nПодробно: https://github.com/droptoptri/physics/blob/main/docs/REG-RU.md\n')
 // Public assets must be readable by the hosting web server after ZIP extraction.
 function publicPermissions(path) {
