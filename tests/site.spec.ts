@@ -80,10 +80,12 @@ test('private storage cannot be retrieved through public paths',async({request})
 
 
 test('consortium subdomain enters the section without a fragment redirect loop',async({request})=>{
-  const root=await request.get('/',{headers:{Host:'cons.sgt-holding.ru'},maxRedirects:0})
+  const root=await request.get('/',{headers:{Host:'cons.test.example'},maxRedirects:0})
   expect(root.status()).toBe(302)
   expect(root.headers().location).toBe('/ksk')
-  const section=await request.get('/ksk',{headers:{Host:'cons.sgt-holding.ru'},maxRedirects:0})
+  const otherHost=await request.get('/',{headers:{Host:'sgt-holding.ru'},maxRedirects:0})
+  expect(otherHost.status()).toBe(200)
+  const section=await request.get('/ksk',{headers:{Host:'cons.test.example'},maxRedirects:0})
   expect(section.status()).toBe(200)
   expect(await section.text()).toContain('<div id="root">')
 })
@@ -131,4 +133,10 @@ test('core pages and partner form pass automated WCAG A/AA checks with reduced m
     const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()
     expect(result.violations,`${target}: ${JSON.stringify(result.violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)})))}`).toEqual([])
   }
+})
+
+// Check rendered text, since hiding a <br> can silently join words only on mobile.
+test('copy keeps word separators and has no indented or clipped lines at nine widths', async ({page}) => {
+  const { checkResponsiveCopy } = await import('./typography')
+  await checkResponsiveCopy(page, '/')
 })

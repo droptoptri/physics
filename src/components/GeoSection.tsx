@@ -18,7 +18,7 @@ export default function GeoSection(){
   return <section className="geo-section" id="geo">
     <div className="wrap">
       <div className="section-index"><span><i/> 02 / СГТ — ГЕО</span><span>ГЕОЛОГИЯ. ПОИСК. ТЕХНОЛОГИИ.</span></div>
-      <div className="geo-heading"><h2>Смотрим глубже.<br/><span>Видим возможности.</span></h2><p>Изучение геологических участков. Поиск полезных ископаемых. Технологии переработки руд и техногенного сырья.</p></div>
+      <div className="geo-heading"><h2>Смотрим глубже.{' '}<br/><span>Видим возможности.</span></h2><p>Изучение геологических участков. Поиск полезных ископаемых. Технологии переработки руд и техногенного сырья.</p></div>
       <div className="geo-interactive">
         <div className={`geo-visual stage-${stage}`}>
           <div className="geo-visual-top"><span className="eyebrow">ПОД ПОВЕРХНОСТЬЮ — ПОТЕНЦИАЛ</span><span className="crosshair">+</span></div>
@@ -43,7 +43,7 @@ export default function GeoSection(){
         <div className="geo-stages"><span className="eyebrow muted">ОТ ИЗУЧЕНИЯ УЧАСТКА К ПЕРЕРАБОТКЕ</span>{stages.map((s,i)=><div key={s.title} className={`geo-stage ${stage===i?'active':''}`}><button onClick={()=>setStage(i)} aria-expanded={stage===i} aria-controls={`geo-stage-${i}`}><span className="stage-number">0{i+1}</span><h3>{s.title}</h3><ArrowUpRight size={20}/></button>{stage===i&&<div className="geo-stage-content" id={`geo-stage-${i}`}><span>{s.caption}</span><p>{s.text}</p></div>}</div>)}<a className="text-link" href="mailto:info@sgt-holding.ru?subject=Запрос%20по%20направлению%20СГТ-ГЕО">Обсудить задачу <ArrowRight size={18}/></a></div>
       </div>
       <div className="geo-principles"><div><span>01</span><h3>Геология + технологии</h3><p>Оцениваем сырьё с учётом способов обогащения и дальнейшей переработки.</p></div><div><span>02</span><h3>Комплексный взгляд</h3><p>Изучаем основные и попутные компоненты: благородные, цветные, редкие и чёрные металлы.</p></div><div><span>03</span><h3>Проверка на местности</h3><p>Сопоставляем дистанционные данные, полевые наблюдения и результаты опробования.</p></div></div>
-      <div className="geo-geography"><div className="geo-geography-heading"><span className="eyebrow red">ГЕОГРАФИЯ ИССЛЕДОВАНИЙ</span><h3>Опыт, который<br/>выходит за границы.</h3><p>Дистанционные и наземные исследования в России и за рубежом.</p></div><div className="geo-regions"><div className="region-buttons" aria-label="Регионы исследований">{regions.map((r,i)=><button key={r.name} onClick={()=>setRegion(i)} className={region===i?'active':''} aria-pressed={region===i}>{r.name}<ArrowUpRight size={14}/></button>)}</div><div className="region-countries" aria-live="polite"><span>0{region+1} / 04</span><p>{regions[region].countries}</p></div></div></div>
+      <div className="geo-geography"><div className="geo-geography-heading"><span className="eyebrow red">ГЕОГРАФИЯ ИССЛЕДОВАНИЙ</span><h3>Опыт, который{' '}<br/>выходит за границы.</h3><p>Дистанционные и наземные исследования в России и за рубежом.</p></div><div className="geo-regions"><div className="region-buttons" aria-label="Регионы исследований">{regions.map((r,i)=><button key={r.name} onClick={()=>setRegion(i)} className={region===i?'active':''} aria-pressed={region===i}>{r.name}<ArrowUpRight size={14}/></button>)}</div><div className="region-countries" aria-live="polite"><span>0{region+1} / 04</span><p>{regions[region].countries}</p></div></div></div>
     </div>
   </section>
 }

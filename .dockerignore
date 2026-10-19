@@ -1,0 +1,14 @@
+.git
+.env
+.env.*
+var
+backups
+node_modules
+dist
+dist-pages
+docs
+tests
+playwright-report
+test-results
+*.log
+*.tsbuildinfo

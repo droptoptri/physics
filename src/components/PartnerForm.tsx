@@ -46,13 +46,13 @@ export default function PartnerForm({ onClose }: { onClose: () => void }) {
       {result||previewPassed?<div className="form-success" role="status">
         <div className="success-icon"><CheckCircle2 size={36}/></div>
         <span className="eyebrow">{previewPassed?'ТЕСТОВАЯ ПРОВЕРКА':'ПЕРВЫЙ ШАГ СДЕЛАН'}</span>
-        <h2 id="partner-title">{previewPassed?'Форма заполнена корректно.':<>Спасибо за интерес<br/>к партнёрству.</>}</h2>
+        <h2 id="partner-title">{previewPassed?'Форма заполнена корректно.':<>Спасибо за интерес{' '}<br/>к партнёрству.</>}</h2>
         <p>{previewPassed?'Поля заполнены, файл выбран. В тестовой версии данные и файл остаются на вашем устройстве. Заявка не отправлялась.':<>Анкета принята и сохранена. {result?.mailEnabled?'Она поставлена в очередь на отправку координатору.':'Координатор сможет рассмотреть её в системе. Отправка на почту станет доступна после подключения почтового сервера.'}</>}</p>
         {result&&<div className="application-id">Номер заявки: <strong>{result.id.slice(0,8).toUpperCase()}</strong></div>}
         <button className="button button-dark" onClick={onClose}>Вернуться на сайт <ArrowUpRight size={18}/></button>
       </div>:<>
         <span className="eyebrow red">СГТ-КСК / ПАРТНЁРСТВО</span>
-        <h2 id="partner-title">Большие задачи.<br/>Надёжные партнёры.</h2>
+        <h2 id="partner-title">Большие задачи.{' '}<br/>Надёжные партнёры.</h2>
         <p className="dialog-intro">Расскажите о вашей компании. Мы изучим компетенции и обсудим возможности совместной работы.</p>
         <a className="download-strip" href={sitePath('/documents/sgt-partner-questionnaire.docx')} download><FileText size={23}/><span><strong>Сначала заполните опросный лист</strong><small>DOCX · 50 КБ</small></span><ArrowDownToLine size={20}/></a>
         {isPreview&&<p className="preview-inline-note">Тестовый просмотр: данные и файл не отправляются.</p>}<form onSubmit={submit}>
