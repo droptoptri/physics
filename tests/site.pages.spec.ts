@@ -58,3 +58,8 @@ test('demo cabinet opens without registration and supports search, filters, deta
   await expect(page.getByRole('button', { name: 'Войти в кабинет' })).toBeDisabled()
   expect(apiRequests).toEqual([])
 })
+
+test('published preview preserves mobile spaces and line alignment at nine widths', async ({page}) => {
+  const { checkResponsiveCopy } = await import('./typography')
+  await checkResponsiveCopy(page, '/physics/')
+})

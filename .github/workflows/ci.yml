@@ -26,6 +26,10 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
       - run: npm run test:pages
+      - name: Build and check the production container
+        run: |
+          docker build -t sgt-holding:ci .
+          node scripts/check-container.mjs sgt-holding:ci
       - name: Upload tested Pages build
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/sgt-design-preview'
         uses: actions/upload-pages-artifact@v3

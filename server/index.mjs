@@ -10,6 +10,8 @@ const production=process.env.NODE_ENV==='production'
 if(production && (!process.env.SESSION_SECRET || process.env.SESSION_SECRET.length<32)) throw new Error('Production requires SESSION_SECRET with at least 32 characters')
 if(production && !process.env.APP_ORIGIN?.split(',').every(s=>s.trim().startsWith('https://'))) throw new Error('Production requires HTTPS APP_ORIGIN (comma-separated for multiple domains)')
 const port=Number(process.env.PORT || 3000)
+const host=process.env.HOST || '0.0.0.0'
+const consortiumHost=(process.env.CONSORTIUM_HOST || 'cons.sgt-holding.ru').trim().toLowerCase()
 const codespacesName=process.env.CODESPACE_NAME || ''
 const codespacesDomain=process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN || ''
 const codespacesHost=process.env.CODESPACES==='true' && /^[a-z0-9-]+$/.test(codespacesName) && /^[a-z0-9.-]+$/.test(codespacesDomain) ? `${codespacesName}-${port}.${codespacesDomain}` : ''
@@ -24,7 +26,7 @@ app.use((req,res,next)=>{
   if(/(?:^|\/)(?:var|\.git|\.env(?:\.[^/]*)?)(?:\/|$)/i.test(path) || path.includes(store.dataDir) || /\.sqlite(?:-|$)/i.test(path))return res.status(404).end()
   next()
 })
-app.get('/',(req,res,next)=>req.hostname==='cons.sgt-holding.ru'?res.redirect(302,'/ksk'):next())
+app.get('/',(req,res,next)=>req.hostname.toLowerCase()===consortiumHost?res.redirect(302,'/ksk'):next())
 if(production || process.env.SERVE_DIST==='true') {
   if(!existsSync(resolve('dist/index.html'))) throw new Error('Run npm run build first')
   app.use(express.static(resolve('dist'),{index:false,maxAge:0}))
@@ -38,7 +40,7 @@ if(production || process.env.SERVE_DIST==='true') {
 const timer=setInterval(()=>void worker.flush(),60000)
 timer.unref()
 void worker.flush()
-const server=app.listen(port,'0.0.0.0',()=>console.log(`SGT server listening on port ${port}; email ${mailer?'configured':'pending SMTP configuration'}`))
+const server=app.listen(port,host,()=>console.log(`SGT server listening on port ${port}; email ${mailer?'configured':'pending SMTP configuration'}`))
 for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>{
   clearInterval(timer)
   server.close(()=>{store.db.close();process.exit(0)})
