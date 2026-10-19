@@ -30,6 +30,12 @@ jobs:
         run: |
           docker build -t sgt-holding:ci .
           node scripts/check-container.mjs sgt-holding:ci
+      - name: Build and check the Host-0 package
+        run: |
+          docker run --rm --user "$(id -u):$(id -g)" -e COMPOSER_HOME=/tmp/composer -v "$PWD/hosting/php:/app" -w /app composer:2 composer install --no-dev --prefer-dist --no-interaction --no-progress
+          npm run build:host0
+          docker build -t sgt-host0-test:local -f hosting/php/tests/Dockerfile .host0-build
+          npm run test:host0
       - name: Upload tested Pages build
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/sgt-design-preview'
         uses: actions/upload-pages-artifact@v3

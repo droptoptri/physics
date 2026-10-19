@@ -12,3 +12,6 @@ playwright-report
 test-results
 *.log
 *.tsbuildinfo
+hosting
+releases
+.host0-build

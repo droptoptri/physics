@@ -2,7 +2,7 @@
 
 Новый сайт компании: СГТ-КСК, СГТ-ГЕО, анкета партнёра и закрытые предложения по тендерам.
 
-React 19 + TypeScript + Vite, Express 5, встроенный SQLite Node.js 24. Шрифты, графика и документы обслуживаются локально. Внешних трекеров нет.
+React 19 + TypeScript + Vite. Для REG.RU Хост-0 подготовлен backend PHP 8.3+ / MySQL и административная панель; альтернативный backend — Express 5 / SQLite на Node.js 24. Шрифты, графика и документы обслуживаются локально. Внешних трекеров нет.
 
 [Макет сайта](docs/previews/desktop.png) · [Мобильная версия](docs/previews/mobile.png) · [Раздел ГЕО](docs/previews/geo.png) · [Кабинет](docs/previews/cabinet.png)
 
@@ -18,7 +18,7 @@ GitHub предложит создать Codespace. Конфигурация а�
 
 ## Размещение на своём домене
 
-[Пошаговая инструкция для REG.RU](docs/REG-RU.md): проверка тарифа, DNS, готовый запуск на VPS, бесплатный HTTPS, подключение почты и резервные копии. Обычный FTP/PHP-хостинг требует отдельной проверки поддержки Node.js 24.
+[Пошаговая инструкция для REG.RU](docs/REG-RU.md): готовая сборка PHP/MySQL для оплаченного Хост-0 и домена sgt-h.ru, установка через браузер, HTTPS, почта и резервные копии. VPS не нужен. Альтернативная Node.js/Docker-поставка описана в [руководстве VPS](docs/VPS.md).
 
 ## Запуск
 
@@ -61,3 +61,7 @@ npm run test:e2e
 `npm run build:pages` создаёт `dist-pages` с базовым путём `/physics/` и отдельными входами `/geo/`, `/ksk/`, `/cabinet/`, `/privacy/`. `npm run test:pages` проверяет такую сборку на настольном и мобильном экране. Обычная `npm run build` создаёт полную серверную сборку без тестового режима.
 
 Workflow `.github/workflows/ci.yml` проверяет `main` и `sgt-design-preview`. Публикация проверенного артефакта выполняется только из `sgt-design-preview`: эта ветка разрешена действующей политикой окружения `github-pages`. После изменений в `main` объедините их с `sgt-design-preview` и отправьте эту ветку в GitHub. В pull request выполняются только проверки.
+
+## Сборка для Хост-0
+
+`composer install --no-dev --prefer-dist --no-interaction` в `hosting/php` устанавливает зафиксированную почтовую библиотеку. Затем `npm run build:host0` создаёт `releases/sgt-host0.zip`: готовый сайт и закрытый backend без секретов и учётных записей. `npm run test:host0` проверяет установку, API, панель, приватные файлы и SMTP TLS на отдельных контейнерах PHP 8.3/Apache/MariaDB; образ проверок предварительно собирается из `hosting/php/tests/Dockerfile` с контекстом `.host0-build`. Docker нужен для разработки и CI, а не на Хост-0.

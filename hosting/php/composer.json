@@ -1,0 +1,16 @@
+{
+  "name": "sgt/host0-backend",
+  "description": "SGT Holding backend for REG.RU shared hosting",
+  "type": "project",
+  "require": {
+    "php": ">=8.3",
+    "phpmailer/phpmailer": "^7.1"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {},
+    "platform": {
+      "php": "8.3.0"
+    }
+  }
+}

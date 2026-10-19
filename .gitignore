@@ -10,3 +10,11 @@ test-results/
 *.log
 dist-pages/
 backups/
+hosting/php/vendor/
+.host0-build/
+hosting/php/private/config.json
+hosting/php/private/secret.key
+hosting/php/private/install-password.txt
+hosting/php/private/uploads/
+hosting/php/private/*.lock
+hosting/php/private/setup-*.json
