@@ -1,8 +1,11 @@
+import { locale } from './i18n'
 export const isPreview = import.meta.env.VITE_SITE_PREVIEW === 'true'
 
 export function sitePath(path: string): string {
   if (!path.startsWith('/') || path.startsWith('//')) return path
-  return `${import.meta.env.BASE_URL}${path.slice(1)}`
+  const resolved = `${import.meta.env.BASE_URL}${path.slice(1)}`
+  if (locale !== 'ru' && /^\/(?:cabinet|privacy|consent|geo|ksk)?\/?$/.test(path)) return `${resolved}?lang=${locale}`
+  return resolved
 }
 
 export function currentPage(): string {

@@ -42,3 +42,31 @@ input::placeholder,textarea::placeholder{color:#70757f}.tender-meta>span:first-c
 /* Keep optional desktop breaks from indenting or joining mobile copy.
    Each JSX break is preceded by a normal, collapsible word separator. */
 @media(max-width:760px){.hero-copy .desktop-break{display:none}}
+
+/* Language controls stay outside the mobile menu, so they remain discoverable. */
+.language-switcher{display:flex;align-items:center;gap:2px;flex-shrink:0;margin-left:auto}
+.language-switcher a{font-size:10px;font-weight:700;min-width:32px;min-height:36px;display:grid;place-items:center;padding:5px 6px;border:1px solid transparent;letter-spacing:.01em}
+.language-switcher a[aria-current=true]{color:var(--red);border-color:var(--line)}
+.language-switcher a:hover{color:var(--red);background:var(--paper)}
+.header-inner>.language-switcher{margin-left:4px}.header-nav{gap:23px}
+.document-language{display:block;font-size:10px;color:#666b73;margin-top:10px}
+.geo-request-note{font-size:12px!important;line-height:1.8!important;border-left:2px solid var(--red);padding-left:14px;margin-top:18px!important}
+.data-notice{font-size:11px;color:#626570;line-height:1.8;margin:18px 0}.data-notice a,.checkbox-label a{text-decoration:underline;text-underline-offset:3px}
+.privacy h1{font-size:clamp(30px,4vw,58px);overflow-wrap:anywhere}.legal-language-note{font-size:12px!important;border-top:1px solid var(--line);padding-top:24px;margin-top:32px!important}
+:lang(zh){font-family:Manrope,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+:lang(zh) h1,:lang(zh) h2,:lang(zh) h3{letter-spacing:0;line-height:1.3}
+:lang(zh) .eyebrow,:lang(zh) .hero-topline,:lang(zh) .hero-chapter{letter-spacing:.05em}
+html[lang=en] .hero h1{font-size:clamp(46px,4.8vw,80px)}
+html[lang=en] .scene-caption{max-width:260px}
+@media(max-width:1300px){.header-tagline,.header-divider{display:none}.header-nav{gap:20px}}
+@media(max-width:760px){
+ .header-inner{gap:8px}.header-inner>.language-switcher{margin-left:auto}.language-switcher a{min-width:30px;font-size:10px;padding:5px}
+ .cabinet-header{flex-wrap:wrap;gap:14px}.cabinet-header>.language-switcher{margin-left:auto}
+ .simple-header{gap:12px;flex-wrap:wrap}.simple-header>.language-switcher{margin-left:auto}
+ html[lang=en] .hero h1{font-size:clamp(40px,9vw,59px)}
+ html[lang=en] .hero-actions{gap:14px}.hero-actions .button{gap:16px}
+ html[lang=zh-Hans] .hero h1{font-size:clamp(38px,10vw,58px)}
+ .geo-request-note{max-width:none!important}.hero-topline>span:first-child{font-size:7px}
+}
+
+@media(max-width:420px){html[lang=en] .hero-actions{flex-direction:column;align-items:flex-start;gap:18px}html[lang=en] .hero-actions .button{white-space:nowrap;min-width:190px}}

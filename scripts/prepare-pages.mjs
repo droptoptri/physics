@@ -3,7 +3,7 @@ import { resolve } from 'node:path'
 
 const directory = resolve('dist-pages')
 const html = readFileSync(resolve(directory, 'index.html'))
-for (const route of ['ksk', 'geo', 'cabinet', 'privacy']) {
+for (const route of ['ksk', 'geo', 'cabinet', 'privacy', 'consent']) {
   mkdirSync(resolve(directory, route), { recursive: true })
   writeFileSync(resolve(directory, route, 'index.html'), html)
 }

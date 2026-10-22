@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer'
 import { resolve, dirname, sep } from 'node:path'
 
-export const recipient = 'antnpk@gmail.com'
+export const recipient = 'ok@sgt-h.ru'
 export function mailConfig(env = process.env) {
   return Boolean(env.SMTP_HOST && env.SMTP_USER && env.SMTP_PASS && env.SMTP_FROM)
 }

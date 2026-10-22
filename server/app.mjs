@@ -9,13 +9,15 @@ import { unlinkSync } from 'node:fs'
 import { digest, hashPassword, checkPassword } from './storage.mjs'
 import { mailConfig } from './mail.mjs'
 
+const CONSENT = '2026-10-22-v2'
+const consentFields = { consentVersion: z.literal(CONSENT), consentLocale: z.enum(['ru','en','zh']) }
 const authSchema = z.object({ email: z.email().max(254).transform(s=>s.toLowerCase().trim()), password: z.string().min(12).max(128) })
-const registerSchema = authSchema.extend({ company: z.string().trim().min(2).max(200), name: z.string().trim().min(2).max(120), consent: z.literal(true) })
+const registerSchema = authSchema.extend({ company: z.string().trim().min(2).max(200), name: z.string().trim().min(2).max(120), consent: z.literal(true), ...consentFields })
 const applicationSchema = z.object({
   company: z.string().trim().min(2).max(200), name: z.string().trim().min(2).max(120),
   email: z.email().max(254).transform(s=>s.toLowerCase().trim()),
   inn: z.string().trim().refine(s=>s==='' || /^\d{10}$|^\d{12}$/.test(s)),
-  message: z.string().trim().max(3000), consent: z.literal('true'), website: z.literal('')
+  message: z.string().trim().max(3000), consent: z.literal('true'), website: z.literal(''), ...consentFields
 })
 const sessionName = 'sgt_session'
 const removeFile = path => { if (path) {try { unlinkSync(path) } catch { /* already removed */ }} }
@@ -31,7 +33,7 @@ export function createApp({ store, secret, production = false, origins = ['http:
   } : false, crossOriginEmbedderPolicy: false, strictTransportSecurity: production ? undefined : false }))
   app.use(express.json({ limit: '20kb' }))
   app.get('/api/health', (_req,res)=>res.json({ ok: true }))
-  app.get('/api/config', (_req,res)=>res.json({ mailEnabled: mailerEnabled, recipient: 'antnpk@gmail.com' }))
+  app.get('/api/config', (_req,res)=>res.json({ mailEnabled: mailerEnabled, recipient: 'ok@sgt-h.ru' }))
   app.use('/api', (_req,res,next)=>{ res.setHeader('Cache-Control','no-store'); next() })
   const csrfSignature = value => createHmac('sha256', secret).update(value).digest('hex')
   app.get('/api/csrf', (req,res)=>{
@@ -72,7 +74,7 @@ export function createApp({ store, secret, production = false, origins = ['http:
       const {email,password,company,name} = parsed.data
       const exists = store.db.prepare('SELECT id FROM users WHERE email=?').get(email)
       if (exists) return res.status(409).json({error:'Не удалось зарегистрировать этот адрес. Войдите или свяжитесь с координатором.'})
-      const result=store.db.prepare('INSERT INTO users(email,company,name,password,consent_version,consent_at) VALUES(?,?,?,?,?,?)').run(email,company,name,hashPassword(password),'2026-10-18-v1',new Date().toISOString())
+      const result=store.db.prepare('INSERT INTO users(email,company,name,password,consent_version,consent_at) VALUES(?,?,?,?,?,?)').run(email,company,name,hashPassword(password),`${CONSENT}:${parsed.data.consentLocale}`,new Date().toISOString())
       session(res,Number(result.lastInsertRowid))
       const user=store.db.prepare('SELECT id,email,company,name,approved FROM users WHERE id=?').get(Number(result.lastInsertRowid))
       res.status(201).json({user})
@@ -119,7 +121,7 @@ export function createApp({ store, secret, production = false, origins = ['http:
       if(!type || type.ext!==extension) {removeFile(req.file.path);return res.status(400).json({error:'Содержимое файла не соответствует формату DOCX или PDF.'})}
       const id=randomUUID(), {company,name,email,inn,message}=parsed.data
       const filename=`anketa-${id.slice(0,8)}.${extension}`
-      store.db.prepare('INSERT INTO applications(id,company,name,email,inn,message,filename,stored_path,consent_version) VALUES(?,?,?,?,?,?,?,?,?)').run(id,company,name,email,inn,message,filename,req.file.path,'2026-10-18-v1')
+      store.db.prepare('INSERT INTO applications(id,company,name,email,inn,message,filename,stored_path,consent_version) VALUES(?,?,?,?,?,?,?,?,?)').run(id,company,name,email,inn,message,filename,req.file.path,`${CONSENT}:${parsed.data.consentLocale}`)
       res.status(202).json({id,status:'queued',mailEnabled:mailerEnabled})
       void worker?.flush()
     }catch(error){removeFile(req.file?.path);next(error)}

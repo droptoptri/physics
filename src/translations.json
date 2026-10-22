@@ -1,0 +1,1310 @@
+{
+  "Гражданское строительство": [
+    "Civil construction",
+    "民用建筑"
+  ],
+  "Жилые и общественные здания, школы, медицинские и спортивные объекты.": [
+    "Residential and public buildings, schools, healthcare and sports facilities.",
+    "住宅与公共建筑、学校、医疗及体育设施。"
+  ],
+  "Промышленные объекты": [
+    "Industrial facilities",
+    "工业设施"
+  ],
+  "Производственные комплексы, реконструкция предприятий и технологические объекты.": [
+    "Production complexes, industrial refurbishment and process facilities.",
+    "生产综合体、工厂改造及工艺设施。"
+  ],
+  "Транспортная инфраструктура": [
+    "Transport infrastructure",
+    "交通基础设施"
+  ],
+  "Автомобильные дороги, мосты и сопутствующая инфраструктура.": [
+    "Roads, bridges and supporting infrastructure.",
+    "公路、桥梁及配套基础设施。"
+  ],
+  "Инженерные системы": [
+    "Utility systems",
+    "市政与工程系统"
+  ],
+  "Водоснабжение, водоотведение, инженерные сети и обеспечение территорий.": [
+    "Water supply, wastewater, utility networks and site infrastructure.",
+    "供水、排水、工程管网及场地配套设施。"
+  ],
+  "Специальные проекты": [
+    "Special projects",
+    "专项工程"
+  ],
+  "Нефтегазовая инфраструктура и объекты с повышенными техническими требованиями.": [
+    "Oil and gas infrastructure and facilities with demanding technical requirements.",
+    "油气基础设施及技术要求较高的工程设施。"
+  ],
+  "Изучаем задачу": [
+    "Understand the project",
+    "了解项目需求"
+  ],
+  "Анализируем технические требования, сроки, географию и состав работ.": [
+    "We review technical requirements, schedules, location and scope.",
+    "分析技术要求、工期、项目地点及工作范围。"
+  ],
+  "Находим компетенции": [
+    "Match the expertise",
+    "匹配专业能力"
+  ],
+  "Сопоставляем опыт, финансовый масштаб, разрешения и ресурсы участников.": [
+    "We assess experience, financial capacity, permits and resources.",
+    "综合评估经验、资金实力、资质许可及资源。"
+  ],
+  "Собираем команду": [
+    "Build the team",
+    "组建项目团队"
+  ],
+  "Выбираем профильного исполнителя и согласовываем роли и зоны ответственности.": [
+    "We select specialist contractors and agree on roles and responsibilities.",
+    "选择专业承包商，明确各方职责与责任范围。"
+  ],
+  "На главную": [
+    "Home",
+    "返回首页"
+  ],
+  "СГТ-ХОЛДИНГ": [
+    "SGT HOLDING",
+    "SGT HOLDING"
+  ],
+  "Кабинет партнёра — СГТ-КСК": [
+    "Partner portal — SGT Consortium",
+    "合作伙伴平台 — SGT 联合体"
+  ],
+  "Обработка данных — СГТ-Холдинг": [
+    "Personal data — SGT Holding",
+    "个人数据 — SGT Holding"
+  ],
+  "Перейти к содержимому": [
+    "Skip to content",
+    "跳转至正文"
+  ],
+  "СГТ-Холдинг — главная": [
+    "SGT Holding — home",
+    "SGT Holding — 首页"
+  ],
+  "ОБЪЕДИНЯЯ КОМПЕТЕНЦИИ.": [
+    "UNITING EXPERTISE.",
+    "汇聚专业能力。"
+  ],
+  "СОЗДАВАЯ ВОЗМОЖНОСТИ.": [
+    "CREATING OPPORTUNITIES.",
+    "共创发展机遇。"
+  ],
+  "Основная навигация": [
+    "Main navigation",
+    "主导航"
+  ],
+  "СГТ — КСК": [
+    "SGT — CONSORTIUM",
+    "SGT — 联合体"
+  ],
+  "СГТ — ГЕО": [
+    "SGT — GEO",
+    "SGT — 地质"
+  ],
+  "Партнёрам": [
+    "Partnership",
+    "合作伙伴"
+  ],
+  "Личный кабинет": [
+    "Partner portal",
+    "合作伙伴平台"
+  ],
+  "Закрыть меню": [
+    "Close menu",
+    "关闭菜单"
+  ],
+  "Открыть меню": [
+    "Open menu",
+    "打开菜单"
+  ],
+  "СГТ — КОНСОРЦИУМ СТРОИТЕЛЬНЫХ КОМПАНИЙ": [
+    "SGT — CONSORTIUM OF CONSTRUCTION COMPANIES",
+    "SGT — 建筑企业联合体"
+  ],
+  "ОТ КОМПЕТЕНЦИЙ К РЕЗУЛЬТАТУ": [
+    "FROM EXPERTISE TO RESULTS",
+    "以专业能力创造价值"
+  ],
+  "СТРОИМ СВЯЗИ. РЕАЛИЗУЕМ ПРОЕКТЫ.": [
+    "BUILDING CONNECTIONS. DELIVERING PROJECTS.",
+    "连接伙伴，推动项目。"
+  ],
+  "Объединяем": [
+    "Uniting",
+    "汇聚"
+  ],
+  "компетенции.": [
+    "expertise.",
+    "专业能力。"
+  ],
+  "Создаём будущее.": [
+    "Building the future.",
+    "共筑未来。"
+  ],
+  "Сильные компании. Общие ресурсы.": [
+    "Strong companies. Shared resources.",
+    "实力企业，共享资源。"
+  ],
+  "Единый подход к сложным строительным": [
+    "A coordinated approach to complex construction",
+    "协同应对复杂的建筑"
+  ],
+  "и инфраструктурным проектам.": [
+    "and infrastructure projects.",
+    "与基础设施项目。"
+  ],
+  "Стать партнёром": [
+    "Become a partner",
+    "成为合作伙伴"
+  ],
+  "О консорциуме": [
+    "About the consortium",
+    "了解联合体"
+  ],
+  "генеральных подрядных": [
+    "general contracting",
+    "家总承包企业"
+  ],
+  "компаний в объединении": [
+    "companies in the consortium",
+    "组成联合体"
+  ],
+  "млрд ₽": [
+    "bn RUB",
+    "十亿卢布"
+  ],
+  "совокупная годовая": [
+    "combined annual",
+    "成员企业合计"
+  ],
+  "выручка участников": [
+    "revenue of members",
+    "年度营业收入"
+  ],
+  "специалистов строительного": [
+    "construction and",
+    "建筑及工程"
+  ],
+  "и инженерного профиля": [
+    "engineering specialists",
+    "领域专业人员"
+  ],
+  "ДВИГАЙТЕСЬ": [
+    "EXPLORE",
+    "探索"
+  ],
+  "К ВОЗМОЖНОСТЯМ": [
+    "THE OPPORTUNITIES",
+    "合作机遇"
+  ],
+  "КОМПЕТЕНЦИИ ОБЪЕДИНЕНИЯ": [
+    "CONSORTIUM EXPERTISE",
+    "联合体专业能力"
+  ],
+  "О КОНСОРЦИУМЕ / PDF": [
+    "ABOUT THE CONSORTIUM / PDF",
+    "联合体介绍 / PDF"
+  ],
+  "СИЛА РАЗНЫХ. РЕЗУЛЬТАТ ОБЩИЙ.": [
+    "DIVERSE STRENGTHS. SHARED RESULTS.",
+    "汇聚多元实力，共创共同成果。"
+  ],
+  "Одна команда.": [
+    "One team.",
+    "一支团队。"
+  ],
+  "Масштаб вашей": [
+    "Built around",
+    "匹配您的"
+  ],
+  "задачи.": [
+    "your project.",
+    "项目规模。"
+  ],
+  "Подбираем исполнителей под проект — с учётом специализации, ресурсов и требований объекта.": [
+    "We match contractors to your project, considering specialisation, resources and site requirements.",
+    "根据专业方向、资源及项目要求，匹配合适的执行团队。"
+  ],
+  "ПРОФИЛЬНАЯ ЭКСПЕРТИЗА УЧАСТНИКОВ": [
+    "SPECIALIST EXPERTISE OF OUR MEMBERS",
+    "成员企业的专业经验"
+  ],
+  "ГЕОГРАФИЯ УЧАСТНИКОВ": [
+    "MEMBER LOCATIONS",
+    "成员企业覆盖地区"
+  ],
+  "Москва и ЦФО": [
+    "Moscow and Central Russia",
+    "莫斯科及俄罗斯中部"
+  ],
+  "Северо-Запад": [
+    "Northwest Russia",
+    "俄罗斯西北部"
+  ],
+  "Юг России": [
+    "Southern Russia",
+    "俄罗斯南部"
+  ],
+  "Поволжье": [
+    "Volga Region",
+    "伏尔加地区"
+  ],
+  "Урал": [
+    "Urals",
+    "乌拉尔地区"
+  ],
+  "Сибирь": [
+    "Siberia",
+    "西伯利亚"
+  ],
+  "Дальний Восток": [
+    "Russian Far East",
+    "俄罗斯远东"
+  ],
+  "Состав команды, обязательства и разрешения проверяются для каждого проекта. Ресурсы и допуски разных компаний не суммируются автоматически.": [
+    "Team composition, obligations and permits are checked for each project. The resources and licences of separate companies are not automatically combined.",
+    "每个项目均单独核查团队构成、责任及许可。不同企业的资源和资质不自动合并。"
+  ],
+  "ВМЕСТЕ МОЖНО БОЛЬШЕ": [
+    "TOGETHER, WE CAN DO MORE",
+    "携手创造更多可能"
+  ],
+  "Следующий большой проект": [
+    "The next major project",
+    "下一个重大项目"
+  ],
+  "может стать": [
+    "could be",
+    "可以由我们"
+  ],
+  "нашим общим.": [
+    "ours to deliver.",
+    "携手完成。"
+  ],
+  "Присоединяйтесь к профессиональному объединению.": [
+    "Join a professional consortium.",
+    "加入专业企业联合体。"
+  ],
+  "Начнём со знакомства с вашей компанией.": [
+    "Let us start by getting to know your company.",
+    "让我们从了解您的企业开始。"
+  ],
+  "Скачать опросный лист": [
+    "Download questionnaire",
+    "下载调查表"
+  ],
+  "Уже партнёр? Войти в кабинет": [
+    "Already a partner? Sign in",
+    "已有合作伙伴账户？登录"
+  ],
+  "НАЧНЁМ С ДИАЛОГА": [
+    "LET US START A CONVERSATION",
+    "开启对话"
+  ],
+  "ОТКРЫТЫ К СОТРУДНИЧЕСТВУ": [
+    "OPEN TO COLLABORATION",
+    "期待携手合作"
+  ],
+  "Есть задача?": [
+    "Have a project?",
+    "有项目需求？"
+  ],
+  "Найдём решение.": [
+    "Let us find a solution.",
+    "共寻解决方案。"
+  ],
+  "Написать СГТ-Холдинг": [
+    "Contact SGT Holding",
+    "联系 SGT Holding"
+  ],
+  "Строительные, инфраструктурные и ресурсные проекты.": [
+    "Construction, infrastructure and resource projects.",
+    "建筑、基础设施与资源项目。"
+  ],
+  "Москва · Пн–Пт, 10:00–19:00 (МСК)": [
+    "Moscow · Mon–Fri, 10:00–19:00 (UTC+3)",
+    "莫斯科 · 周一至周五 10:00–19:00（UTC+3）"
+  ],
+  "СГТ-Холдинг — наверх": [
+    "SGT Holding — back to top",
+    "SGT Holding — 返回顶部"
+  ],
+  "Навигация в подвале": [
+    "Footer navigation",
+    "页脚导航"
+  ],
+  "Кабинет партнёра": [
+    "Partner portal",
+    "合作伙伴平台"
+  ],
+  "Наверх": [
+    "Back to top",
+    "返回顶部"
+  ],
+  "СГТ-Холдинг": [
+    "SGT Holding",
+    "SGT Holding"
+  ],
+  "СТРОИМ БУДУЩЕЕ ВМЕСТЕ": [
+    "BUILDING THE FUTURE TOGETHER",
+    "携手共筑未来"
+  ],
+  "Обработка персональных данных": [
+    "Personal data processing",
+    "个人数据处理"
+  ],
+  "Перейти к партнёрству": [
+    "Go to partnership",
+    "前往合作伙伴板块"
+  ],
+  "Выберите файл DOCX или PDF размером до 10 МБ.": [
+    "Choose a DOCX or PDF file up to 10 MB.",
+    "请选择不超过 10 MB 的 DOCX 或 PDF 文件。"
+  ],
+  "Приложите заполненный опросный лист.": [
+    "Attach the completed questionnaire.",
+    "请附上填写完整的调查表。"
+  ],
+  "Не удалось отправить анкету.": [
+    "The questionnaire could not be submitted.",
+    "调查表提交失败。"
+  ],
+  "Закрыть форму": [
+    "Close form",
+    "关闭表单"
+  ],
+  "ТЕСТОВАЯ ПРОВЕРКА": [
+    "TEST CHECK",
+    "测试验证"
+  ],
+  "ПЕРВЫЙ ШАГ СДЕЛАН": [
+    "THE FIRST STEP IS COMPLETE",
+    "合作的第一步已完成"
+  ],
+  "Форма заполнена корректно.": [
+    "The form is complete.",
+    "表单填写正确。"
+  ],
+  "Спасибо за интерес": [
+    "Thank you for your interest",
+    "感谢您对合作"
+  ],
+  "к партнёрству.": [
+    "in partnership.",
+    "的关注。"
+  ],
+  "Поля заполнены, файл выбран. В тестовой версии данные и файл остаются на вашем устройстве. Заявка не отправлялась.": [
+    "The fields are complete and a file is selected. In this preview, your data and file stay on your device. No application was submitted.",
+    "表单已填写并已选择文件。在预览版中，数据与文件仅保留在您的设备上，申请尚未发送。"
+  ],
+  "Анкета принята и сохранена.": [
+    "Your questionnaire has been received and saved.",
+    "您的调查表已接收并保存。"
+  ],
+  "Она поставлена в очередь на отправку координатору.": [
+    "It has been queued for delivery to the coordinator.",
+    "已加入发送给协调人的邮件队列。"
+  ],
+  "Координатор сможет рассмотреть её в системе. Отправка на почту станет доступна после подключения почтового сервера.": [
+    "The coordinator can review it in the system. Email delivery will be available once the mail server is configured.",
+    "协调人可在系统中查看。配置邮件服务器后即可启用邮件通知。"
+  ],
+  "Номер заявки:": [
+    "Application reference:",
+    "申请编号："
+  ],
+  "Вернуться на сайт": [
+    "Return to website",
+    "返回网站"
+  ],
+  "СГТ-КСК / ПАРТНЁРСТВО": [
+    "SGT CONSORTIUM / PARTNERSHIP",
+    "SGT 联合体 / 合作伙伴"
+  ],
+  "Большие задачи.": [
+    "Ambitious projects.",
+    "重大项目。"
+  ],
+  "Надёжные партнёры.": [
+    "Reliable partners.",
+    "可靠伙伴。"
+  ],
+  "Расскажите о вашей компании. Мы изучим компетенции и обсудим возможности совместной работы.": [
+    "Tell us about your company. We will review your expertise and discuss opportunities to work together.",
+    "请介绍您的企业。我们将了解贵司的专业能力，并探讨合作机会。"
+  ],
+  "Сначала заполните опросный лист": [
+    "Complete the questionnaire first",
+    "请先填写调查表"
+  ],
+  "Тестовый просмотр: данные и файл не отправляются.": [
+    "Preview: data and files are not submitted.",
+    "预览模式：数据和文件不会发送。"
+  ],
+  "Компания": [
+    "Company",
+    "企业名称"
+  ],
+  "ООО «Название компании»": [
+    "Company name",
+    "企业名称"
+  ],
+  "ИНН": [
+    "Russian tax ID (INN)",
+    "俄罗斯纳税人识别号（ИНН）"
+  ],
+  "10 или 12 цифр": [
+    "10 or 12 digits",
+    "10 位或 12 位数字"
+  ],
+  "Контактное лицо": [
+    "Contact person",
+    "联系人"
+  ],
+  "Имя и фамилия": [
+    "Full name",
+    "姓名"
+  ],
+  "Электронная почта": [
+    "Email",
+    "电子邮箱"
+  ],
+  "Комментарий": [
+    "Message",
+    "留言"
+  ],
+  "Направления работ, регионы или ваш вопрос": [
+    "Services, regions or your question",
+    "业务方向、地区或您的问题"
+  ],
+  "Загрузите заполненную анкету": [
+    "Upload the completed questionnaire",
+    "上传填写完整的调查表"
+  ],
+  "Перетащите файл или выберите на устройстве · DOCX, PDF до 10 МБ": [
+    "Drop a file or choose from your device · DOCX, PDF up to 10 MB",
+    "拖放文件或从设备选择 · DOCX、PDF，不超过 10 MB"
+  ],
+  "Ваш сайт": [
+    "Your website",
+    "您的网站"
+  ],
+  "Сохраняем анкету…": [
+    "Saving your questionnaire…",
+    "正在保存调查表…"
+  ],
+  "Проверить форму": [
+    "Check form",
+    "检查表单"
+  ],
+  "Отправить заявку": [
+    "Submit application",
+    "提交申请"
+  ],
+  "Анкета не создаёт обязательств по вступлению в консорциум.": [
+    "Submitting the questionnaire does not create an obligation to join the consortium.",
+    "提交调查表不构成加入联合体的义务。"
+  ],
+  "Все направления": [
+    "All sectors",
+    "全部业务方向"
+  ],
+  "Ошибка соединения.": [
+    "Connection error.",
+    "连接错误。"
+  ],
+  "Выйти": [
+    "Sign out",
+    "退出登录"
+  ],
+  "Загружаем кабинет…": [
+    "Loading your portal…",
+    "正在加载合作伙伴平台…"
+  ],
+  "СГТ-КСК / ЛИЧНЫЙ КАБИНЕТ": [
+    "SGT CONSORTIUM / PARTNER PORTAL",
+    "SGT 联合体 / 合作伙伴平台"
+  ],
+  "Здравствуйте,": [
+    "Hello,",
+    "您好，"
+  ],
+  "Компания подтверждена": [
+    "Company verified",
+    "企业已认证"
+  ],
+  "На подтверждении": [
+    "Awaiting verification",
+    "等待审核"
+  ],
+  "Демонстрационный кабинет. Все предложения ниже вымышлены и показаны для тестирования интерфейса.": [
+    "Demo portal. All opportunities below are fictional and provided for interface testing.",
+    "演示平台。以下所有项目机会均为虚构，仅用于界面测试。"
+  ],
+  "РЕГИСТРАЦИЯ ЗАВЕРШЕНА": [
+    "REGISTRATION COMPLETE",
+    "注册完成"
+  ],
+  "Знакомство — первый шаг": [
+    "Getting acquainted is the first step",
+    "相互了解是"
+  ],
+  "к совместной работе.": [
+    "towards working together.",
+    "携手合作的第一步。"
+  ],
+  "Координатор проверит сведения о компании и откроет доступ к предложениям по тендерам. До подтверждения предложения защищены.": [
+    "The coordinator will review your company and grant access to tender opportunities. Proposals remain private until verification.",
+    "协调人将核查企业信息后开放招标机会。在审核通过前，项目内容不对外开放。"
+  ],
+  "Аккаунт создан": [
+    "Account created",
+    "账户已创建"
+  ],
+  "Проверка компании": [
+    "Company review",
+    "企业审核"
+  ],
+  "Связаться с координатором": [
+    "Contact the coordinator",
+    "联系协调人"
+  ],
+  "Предложения по тендерам": [
+    "Tender opportunities",
+    "招标机会"
+  ],
+  "Актуальные возможности для участников консорциума": [
+    "Current opportunities for consortium members",
+    "联合体成员的最新合作机会"
+  ],
+  "Поиск по тендерам": [
+    "Search tenders",
+    "搜索招标项目"
+  ],
+  "Название, регион или вид работ": [
+    "Title, region or type of work",
+    "名称、地区或工作类型"
+  ],
+  "Направление тендера": [
+    "Tender sector",
+    "招标业务方向"
+  ],
+  "Загружаем предложения…": [
+    "Loading opportunities…",
+    "正在加载项目机会…"
+  ],
+  "Повторить загрузку": [
+    "Try loading again",
+    "重新加载"
+  ],
+  "Приём откликов до": [
+    "Response deadline:",
+    "响应截止日期："
+  ],
+  "Это демонстрационное предложение. Отклики в тестовой версии не отправляются.": [
+    "This is a demo opportunity. Responses are not submitted in the preview.",
+    "此为演示项目。预览版不会发送响应。"
+  ],
+  "Отклик на тендер:": [
+    "Tender response:",
+    "招标响应："
+  ],
+  "Обсудить участие": [
+    "Discuss participation",
+    "洽谈参与事宜"
+  ],
+  "Ничего не нашлось": [
+    "No results found",
+    "未找到结果"
+  ],
+  "Новые возможности — впереди": [
+    "New opportunities are on the way",
+    "更多机会即将发布"
+  ],
+  "Измените запрос или выберите другое направление.": [
+    "Change your search or choose another sector.",
+    "请修改搜索内容或选择其他业务方向。"
+  ],
+  "Координатор опубликует предложения здесь, как только они будут доступны.": [
+    "The coordinator will publish opportunities here as they become available.",
+    "协调人将在有新机会时发布相关信息。"
+  ],
+  "Сбросить фильтры": [
+    "Reset filters",
+    "重置筛选"
+  ],
+  "СГТ-КСК / ПАРТНЁРСКАЯ ПЛАТФОРМА": [
+    "SGT CONSORTIUM / PARTNER PLATFORM",
+    "SGT 联合体 / 合作伙伴平台"
+  ],
+  "Ваши компетенции.": [
+    "Your expertise.",
+    "您的专业能力。"
+  ],
+  "Наши общие": [
+    "Our shared",
+    "我们共同的"
+  ],
+  "возможности.": [
+    "opportunities.",
+    "发展机遇。"
+  ],
+  "Закрытое пространство для взаимодействия участников консорциума.": [
+    "A private space for consortium members to work together.",
+    "联合体成员沟通协作的专属空间。"
+  ],
+  "Доступ к предложениям —": [
+    "Access to opportunities —",
+    "项目机会访问权限——"
+  ],
+  "после подтверждения компании": [
+    "after company verification",
+    "企业审核通过后开放"
+  ],
+  "ДОБРО ПОЖАЛОВАТЬ": [
+    "WELCOME",
+    "欢迎"
+  ],
+  "Стать участником": [
+    "Join the consortium",
+    "申请加入联合体"
+  ],
+  "Войдите, чтобы увидеть предложения для вашей компании.": [
+    "Sign in to see opportunities for your company.",
+    "登录以查看适合贵司的项目机会。"
+  ],
+  "Создайте аккаунт. Координатор проверит компанию и откроет доступ к предложениям.": [
+    "Create an account. The coordinator will verify your company and grant access to opportunities.",
+    "创建账户后，协调人将审核贵司并开放项目机会。"
+  ],
+  "Регистрация и вход доступны в серверной версии. Здесь можно открыть демонстрационный кабинет без ввода данных.": [
+    "Registration and sign-in are available in the server version. Here you can open the demo portal without entering any data.",
+    "注册与登录仅在正式服务器版本提供。此处可直接进入演示平台，无需输入个人数据。"
+  ],
+  "Посмотреть демо-кабинет": [
+    "Explore the demo portal",
+    "查看演示平台"
+  ],
+  "Вход": [
+    "Sign in",
+    "登录"
+  ],
+  "Регистрация": [
+    "Register",
+    "注册"
+  ],
+  "Название вашей компании": [
+    "Your company name",
+    "贵司名称"
+  ],
+  "Как к вам обращаться": [
+    "How should we address you?",
+    "请输入您的姓名"
+  ],
+  "Пароль": [
+    "Password",
+    "密码"
+  ],
+  "Не менее 12 символов": [
+    "At least 12 characters",
+    "至少 12 个字符"
+  ],
+  "Введите пароль": [
+    "Enter your password",
+    "请输入密码"
+  ],
+  "Скрыть пароль": [
+    "Hide password",
+    "隐藏密码"
+  ],
+  "Показать пароль": [
+    "Show password",
+    "显示密码"
+  ],
+  "Войти в кабинет": [
+    "Sign in to the portal",
+    "登录合作伙伴平台"
+  ],
+  "Зарегистрироваться": [
+    "Create account",
+    "创建账户"
+  ],
+  "Нужна помощь со входом?": [
+    "Need help signing in?",
+    "登录遇到问题？"
+  ],
+  "Предложения доступны зарегистрированным и подтверждённым партнёрам.": [
+    "Opportunities are available to registered and verified partners.",
+    "仅已注册并通过审核的合作伙伴可访问项目机会。"
+  ],
+  "Архитектурная схема: разные компетенции объединяются в один проект": [
+    "Architectural diagram: different skills come together in one project",
+    "建筑示意图：不同专业能力汇聚于同一项目"
+  ],
+  "ИНЖИНИРИНГ": [
+    "ENGINEERING",
+    "工程技术"
+  ],
+  "РЕСУРСЫ": [
+    "RESOURCES",
+    "资源"
+  ],
+  "КОМПЕТЕНЦИИ": [
+    "EXPERTISE",
+    "专业能力"
+  ],
+  "СИЛА В ОБЪЕДИНЕНИИ": [
+    "STRENGTH IN UNITY",
+    "凝聚力量"
+  ],
+  "Принципы объединения": [
+    "Consortium principles",
+    "联合体原则"
+  ],
+  "Компетенции": [
+    "Expertise",
+    "专业能力"
+  ],
+  "Ресурсы": [
+    "Resources",
+    "资源"
+  ],
+  "Координация": [
+    "Coordination",
+    "统筹协作"
+  ],
+  "Профильная экспертиза для каждого этапа проекта.": [
+    "Specialist expertise at every project stage.",
+    "为项目各阶段提供专业支持。"
+  ],
+  "Производственная и инженерная база участников.": [
+    "Production and engineering resources of our members.",
+    "成员企业的生产与工程资源。"
+  ],
+  "Единый подход к взаимодействию проектных команд.": [
+    "A coordinated approach across project teams.",
+    "项目团队协同合作的统一机制。"
+  ],
+  "Оценка территории": [
+    "Area assessment",
+    "区域评估"
+  ],
+  "Начинаем с геологической основы": [
+    "Start with the geological setting",
+    "从地质基础入手"
+  ],
+  "Анализируем материалы прошлых работ, строение участка и условия образования месторождений. Выделяем перспективные направления дальнейших исследований.": [
+    "We review previous studies, site geology and deposit formation conditions to identify promising research directions.",
+    "分析已有研究、场地地质构造和矿床形成条件，确定后续研究方向。"
+  ],
+  "Дистанционные исследования": [
+    "Remote sensing",
+    "遥感研究"
+  ],
+  "От общей картины — к перспективным зонам": [
+    "From the big picture to target areas",
+    "从整体认识到圈定目标区"
+  ],
+  "Используем спутниковые материалы, мультиспектральную съёмку и лидар. Результаты интерпретации определяют участки для последующей наземной проверки.": [
+    "We use satellite data, multispectral imagery and lidar. Interpretation results identify areas for subsequent ground verification.",
+    "利用卫星数据、多光谱影像及激光雷达，通过解译确定后续实地验证区域。"
+  ],
+  "Полевые работы и пробы": [
+    "Fieldwork and sampling",
+    "实地工作与采样"
+  ],
+  "Проверяем на местности": [
+    "Verify on the ground",
+    "开展实地验证"
+  ],
+  "Соединяем наземные исследования, геофизические методы и опробование. Мобильное технологическое оборудование помогает изучать сырьё непосредственно на объекте.": [
+    "We combine field studies, geophysical methods and sampling. Mobile processing equipment helps assess materials directly on site.",
+    "结合实地调查、地球物理方法及采样，利用移动工艺设备在现场研究原料。"
+  ],
+  "Технологии переработки": [
+    "Mineral processing",
+    "矿物加工技术"
+  ],
+  "Ищем ценность в составе сырья": [
+    "Find value in the material",
+    "挖掘原料价值"
+  ],
+  "Разрабатываем подходы к обогащению бедных и упорных руд, хвостов и техногенного сырья. Учитываем основные и попутные полезные компоненты.": [
+    "We develop processing approaches for low-grade and refractory ores, tailings and industrial mineral waste, considering primary and associated valuable components.",
+    "针对低品位矿、难选矿、尾矿及工业矿物废料，研究兼顾主要和伴生有价组分的选矿方案。"
+  ],
+  "Россия и Центральная Азия": [
+    "Russia and Central Asia",
+    "俄罗斯与中亚"
+  ],
+  "Россия · Узбекистан · Казахстан": [
+    "Russia · Uzbekistan · Kazakhstan",
+    "俄罗斯 · 乌兹别克斯坦 · 哈萨克斯坦"
+  ],
+  "Африка": [
+    "Africa",
+    "非洲"
+  ],
+  "Судан · Буркина-Фасо · Кения · Египет · Мали · Нигерия · Гана · Чад · Руанда": [
+    "Sudan · Burkina Faso · Kenya · Egypt · Mali · Nigeria · Ghana · Chad · Rwanda",
+    "苏丹 · 布基纳法索 · 肯尼亚 · 埃及 · 马里 · 尼日利亚 · 加纳 · 乍得 · 卢旺达"
+  ],
+  "Южная Америка": [
+    "South America",
+    "南美洲"
+  ],
+  "Перу · Парагвай · Аргентина · Венесуэла": [
+    "Peru · Paraguay · Argentina · Venezuela",
+    "秘鲁 · 巴拉圭 · 阿根廷 · 委内瑞拉"
+  ],
+  "Ближний Восток": [
+    "Middle East",
+    "中东"
+  ],
+  "Иран": [
+    "Iran",
+    "伊朗"
+  ],
+  "02 / СГТ — ГЕО": [
+    "02 / SGT — GEO",
+    "02 / SGT — 地质"
+  ],
+  "ГЕОЛОГИЯ. ПОИСК. ТЕХНОЛОГИИ.": [
+    "GEOLOGY. EXPLORATION. TECHNOLOGY.",
+    "地质。勘查。技术。"
+  ],
+  "Смотрим глубже.": [
+    "Looking deeper.",
+    "深入探索。"
+  ],
+  "Видим возможности.": [
+    "Seeing opportunities.",
+    "发现机遇。"
+  ],
+  "Изучение геологических участков. Поиск полезных ископаемых. Технологии переработки руд и техногенного сырья.": [
+    "Geological site studies. Mineral exploration. Processing technologies for ores and industrial mineral waste.",
+    "地质区块研究、矿产勘查以及矿石与工业矿物废料加工技术。"
+  ],
+  "ПОД ПОВЕРХНОСТЬЮ — ПОТЕНЦИАЛ": [
+    "POTENTIAL BENEATH THE SURFACE",
+    "地表之下，蕴藏潜力"
+  ],
+  "Интерактивный геологический разрез: от исходных данных к проектному решению": [
+    "Interactive geological section: from source data to a project solution",
+    "交互式地质剖面：从原始数据到项目方案"
+  ],
+  "ПОВЕРХНОСТЬ": [
+    "SURFACE",
+    "地表"
+  ],
+  "РЕСУРСНЫЙ СЛОЙ": [
+    "RESOURCE LAYER",
+    "矿产层"
+  ],
+  "СХЕМА ПОДХОДА": [
+    "APPROACH DIAGRAM",
+    "方法示意图"
+  ],
+  "АНАЛИЗ → РЕШЕНИЕ": [
+    "ANALYSIS → SOLUTION",
+    "分析 → 方案"
+  ],
+  "ОТ ИЗУЧЕНИЯ УЧАСТКА К ПЕРЕРАБОТКЕ": [
+    "FROM SITE STUDIES TO PROCESSING",
+    "从场地研究到矿物加工"
+  ],
+  "Геология + технологии": [
+    "Geology + technology",
+    "地质 + 技术"
+  ],
+  "Оцениваем сырьё с учётом способов обогащения и дальнейшей переработки.": [
+    "We assess materials with a view to beneficiation and further processing.",
+    "结合选矿和后续加工方法评估原料。"
+  ],
+  "Комплексный взгляд": [
+    "An integrated perspective",
+    "综合视角"
+  ],
+  "Изучаем основные и попутные компоненты: благородные, цветные, редкие и чёрные металлы.": [
+    "We study primary and associated components: precious, non-ferrous, rare and ferrous metals.",
+    "研究主要及伴生组分，涵盖贵金属、有色金属、稀有金属及黑色金属。"
+  ],
+  "Проверка на местности": [
+    "Ground verification",
+    "实地验证"
+  ],
+  "Сопоставляем дистанционные данные, полевые наблюдения и результаты опробования.": [
+    "We compare remote sensing data, field observations and sampling results.",
+    "对比遥感数据、实地观测与采样结果。"
+  ],
+  "ГЕОГРАФИЯ ИССЛЕДОВАНИЙ": [
+    "RESEARCH GEOGRAPHY",
+    "研究覆盖地区"
+  ],
+  "Опыт, который": [
+    "Experience that",
+    "跨越国界的"
+  ],
+  "выходит за границы.": [
+    "crosses borders.",
+    "项目经验。"
+  ],
+  "Дистанционные и наземные исследования в России и за рубежом.": [
+    "Remote and ground-based studies in Russia and abroad.",
+    "在俄罗斯及海外开展遥感与实地研究。"
+  ],
+  "Регионы исследований": [
+    "Research regions",
+    "研究地区"
+  ],
+  "Партнёр": [
+    "Partner",
+    "合作伙伴"
+  ],
+  "Демонстрационная компания": [
+    "Demo company",
+    "演示企业"
+  ],
+  "Демо · Строительство промышленного объекта": [
+    "Demo · Industrial facility construction",
+    "演示 · 工业设施建设"
+  ],
+  "Промышленное строительство": [
+    "Industrial construction",
+    "工业建筑"
+  ],
+  "Центральный федеральный округ": [
+    "Central Russia",
+    "俄罗斯中部"
+  ],
+  "Демонстрационный пример для проверки интерфейса. Здесь будут состав работ, требования к участнику и условия проекта. Это не действующая закупка; отклики не принимаются.": [
+    "Demo example for interface testing. Scope, requirements and project terms will appear here. This is not an active procurement; responses are not accepted.",
+    "用于界面测试的演示示例。此处将展示工作范围、参与要求及项目条件。这不是实际采购项目，不接受响应。"
+  ],
+  "Демо · Развитие инженерной инфраструктуры": [
+    "Demo · Utility infrastructure development",
+    "演示 · 市政基础设施建设"
+  ],
+  "Демонстрационный пример для проверки поиска, фильтров и раскрытия карточки. Реальные предложения доступны только подтверждённым партнёрам в серверной версии.": [
+    "Demo example for testing search, filters and expandable cards. Real opportunities are available only to verified partners in the server version.",
+    "用于测试搜索、筛选及卡片展开功能的演示示例。实际项目机会仅向正式版本中审核通过的合作伙伴开放。"
+  ],
+  "Не удалось установить защищённое соединение.": [
+    "Could not establish a secure connection.",
+    "无法建立安全连接。"
+  ],
+  "Серверные операции недоступны в тестовой версии GitHub Pages.": [
+    "Server operations are unavailable in the GitHub Pages preview.",
+    "GitHub Pages 预览版不支持服务器操作。"
+  ],
+  "Нет соединения с сервером. Проверьте подключение и повторите попытку.": [
+    "No connection to the server. Check your connection and try again.",
+    "无法连接服务器，请检查网络后重试。"
+  ],
+  "Не удалось выполнить запрос.": [
+    "The request could not be completed.",
+    "请求未能完成。"
+  ],
+  "Тестовая версия": [
+    "Preview version",
+    "预览版"
+  ],
+  "Можно проверить интерфейс. Заявки и пароли не отправляются.": [
+    "Explore the interface. Applications and passwords are not submitted.",
+    "可体验界面；申请和密码不会发送。"
+  ],
+  "03 · Доступ к тендерам": [
+    "03 · Tender access",
+    "03 · 开放招标信息"
+  ],
+  "Подтвердите согласие на обработку персональных данных.": [
+    "Please confirm your consent to personal data processing.",
+    "请确认您同意处理个人数据。"
+  ],
+  "DOCX · на русском языке": [
+    "DOCX · in Russian",
+    "DOCX · 俄文"
+  ],
+  "КБ · нажмите, чтобы заменить": [
+    "KB · click to replace",
+    "KB · 点击替换"
+  ],
+  "Даю": [
+    "I give",
+    "本人"
+  ],
+  "отдельное согласие на обработку моих персональных данных": [
+    "separate consent to the processing of my personal data",
+    "单独同意"
+  ],
+  "АО «СГТХОЛДИНГ» для рассмотрения партнёрства и связи со мной.": [
+    "to SGT HOLDING JSC to review partnership opportunities and contact me.",
+    "SGT HOLDING 股份公司为评估合作及与本人联系而处理本人的个人数据。"
+  ],
+  "Порядок обработки, сроки хранения и отзыв согласия:": [
+    "Processing rules, retention and withdrawal of consent:",
+    "处理规则、保存期限及撤回同意："
+  ],
+  "политика обработки персональных данных": [
+    "personal data processing policy",
+    "个人数据处理政策"
+  ],
+  ". Не прикладывайте паспортные данные и сведения других лиц без законного основания.": [
+    ". Do not attach passport details or other people's data without a lawful basis.",
+    "。请勿附上护照信息或无合法依据提供他人数据。"
+  ],
+  "АО «СГТХОЛДИНГ» для регистрации и использования кабинета.": [
+    "to SGT HOLDING JSC for registration and use of the partner portal.",
+    "SGT HOLDING 股份公司为注册和使用合作伙伴平台而处理本人的个人数据。"
+  ],
+  "Политика обработки персональных данных": [
+    "Personal data processing policy",
+    "个人数据处理政策"
+  ],
+  "Скачать презентацию": [
+    "Download presentation",
+    "下载演示文稿"
+  ],
+  "PDF · на русском языке": [
+    "PDF · in Russian",
+    "PDF · 俄文"
+  ],
+  "Информация о проведённых работах и исследованиях может быть предоставлена по дополнительному запросу.": [
+    "Further information on completed projects and studies is available upon additional request.",
+    "有关已完成项目及研究的详细信息，可另行提出请求获取。"
+  ],
+  "Согласие на обработку персональных данных": [
+    "Consent to personal data processing",
+    "个人数据处理同意书"
+  ],
+  "Редакция от 22 октября 2026 года ·": [
+    "Revision dated 22 October 2026 ·",
+    "2026 年 10 月 22 日修订 ·"
+  ],
+  "Оператор персональных данных": [
+    "Personal data operator",
+    "个人数据处理者"
+  ],
+  ". ИНН": [
+    ". Tax ID (INN)",
+    "。纳税人识别号（ИНН）"
+  ],
+  ", ОГРН": [
+    ", registration number (OGRN)",
+    "，国家主要注册号（ОГРН）"
+  ],
+  ". Юридический адрес:": [
+    ". Registered address:",
+    "。法定地址："
+  ],
+  ". Электронная почта для обращений:": [
+    ". Email for enquiries:",
+    "。联系邮箱："
+  ],
+  "Добровольное согласие": [
+    "Voluntary consent",
+    "自愿同意"
+  ],
+  "Я свободно, своей волей и в своём интересе даю указанному оператору согласие на обработку моих персональных данных на условиях настоящего отдельного документа. Согласие предоставляется установкой отдельной, заранее не отмеченной галочки и отправкой формы на sgt-h.ru или cons.sgt-h.ru. Ознакомление с политикой само по себе не означает предоставление согласия.": [
+    "I freely give the operator identified above consent to process my personal data in my own interests, on the terms of this separate document. Consent is given by selecting a separate, initially unchecked box and submitting the form on sgt-h.ru or cons.sgt-h.ru. Reading the policy alone does not constitute consent.",
+    "本人自由、自愿并为自身利益，按照本独立文件的条款，同意上述处理者处理本人的个人数据。同意通过在 sgt-h.ru 或 cons.sgt-h.ru 上勾选单独且默认未选中的复选框并提交表单的方式作出。仅阅读政策不构成同意。"
+  ],
+  "Цели и состав данных": [
+    "Purposes and data covered",
+    "处理目的与数据范围"
+  ],
+  "Для рассмотрения обращения о партнёрстве, проверки представляемой компании, связи со мной и обсуждения сотрудничества обрабатываются мои имя и фамилия, должность, рабочий адрес электронной почты, рабочий телефон, если я его указал, а также относящиеся ко мне сведения из комментария и приложенной анкеты. Наименование и ИНН компании используются для идентификации представляемой организации.": [
+    "To review my partnership enquiry, assess the company I represent, contact me and discuss cooperation, the operator processes my first and last name, job title, work email, work phone if supplied, and information about me in the message and attached questionnaire. The company name and tax ID identify the represented organisation.",
+    "为评估合作申请、核查本人代表的企业、联系本人及讨论合作，处理者处理本人的姓名、职务、工作邮箱、自愿提供的工作电话，以及留言和附带调查表中与本人有关的信息。企业名称及纳税人识别号用于识别所代表的组织。"
+  ],
+  "При регистрации в кабинете дополнительно обрабатываются учётные данные, защищённый хеш пароля и сведения о подтверждении компании для создания и обслуживания аккаунта и предоставления доступа к предложениям консорциума.": [
+    "Registration additionally involves processing account details, a protected password hash and company verification status to create and maintain the account and provide access to consortium opportunities.",
+    "注册平台账户时，还将处理账户信息、受保护的密码哈希值及企业审核状态，用于创建和维护账户并提供联合体项目机会的访问权限。"
+  ],
+  "Действия с данными": [
+    "Processing operations",
+    "处理操作"
+  ],
+  "Разрешаю сбор, запись, систематизацию, накопление, хранение, уточнение, извлечение, использование, предоставление доступа уполномоченным сотрудникам оператора, блокирование, удаление и уничтожение данных с использованием средств автоматизации и без них. Обработка не включает публикацию данных, общедоступное распространение, рекламные рассылки или принятие решений, порождающих юридические последствия, исключительно автоматизированным способом.": [
+    "I authorise collection, recording, organisation, accumulation, storage, updating, retrieval, use, access by the operator's authorised employees, restriction, deletion and destruction, using automated and non-automated means. Processing does not include publication, public dissemination, advertising mailings or decisions producing legal effects based solely on automated processing.",
+    "本人授权以自动化及非自动化方式收集、记录、整理、积累、保存、更新、检索、使用数据，向处理者授权员工提供访问权限，以及限制处理、删除和销毁数据。处理不包括公开发布、向公众传播、广告邮件，或仅依赖自动化处理作出具有法律后果的决定。"
+  ],
+  "Срок и отзыв": [
+    "Duration and withdrawal",
+    "有效期与撤回"
+  ],
+  "Согласие действует до завершения рассмотрения обращения и обсуждения сотрудничества, а для аккаунта — в течение срока его использования, либо до отзыва согласия. Отозвать согласие, запросить уточнение или удаление данных можно письмом на указанный адрес оператора с темой «Персональные данные». Укажите адрес, использованный в форме, и номер заявки, если он известен. Оператор прекращает обработку и уничтожает данные в сроки, установленные статьёй 21 Федерального закона № 152-ФЗ, если отсутствуют иные законные основания для обработки.": [
+    "Consent remains effective until the enquiry review and cooperation discussions conclude and, for an account, while it is used, or until consent is withdrawn. You may withdraw consent or request correction or deletion by emailing the operator with the subject “Personal data”. Include the email used in the form and the application reference, if known. The operator stops processing and destroys data within the periods set by Article 21 of Federal Law No. 152-FZ, unless another lawful basis permits continued processing.",
+    "同意有效至申请审查及合作洽谈结束；账户相关同意在账户使用期间有效，或至同意被撤回。可发送主题为“个人数据”的邮件至处理者邮箱，撤回同意或要求更正、删除数据。请注明表单中使用的邮箱和申请编号（如有）。除存在其他合法处理依据外，处理者按照俄罗斯第 152-ФЗ 号联邦法律第 21 条规定的期限停止处理并销毁数据。"
+  ],
+  "Сведения третьих лиц": [
+    "Third-party information",
+    "第三方信息"
+  ],
+  "Это согласие относится только к моим данным. Не следует включать в анкету данные других физических лиц без надлежащего правового основания. Паспортные данные, специальные категории персональных данных и биометрические данные для рассмотрения партнёрства не требуются.": [
+    "This consent covers only my own data. Do not include other individuals' data in the questionnaire without a proper lawful basis. Passport details, special categories of personal data and biometric data are not required to assess partnership opportunities.",
+    "本同意仅适用于本人的数据。无适当合法依据，不应在调查表中包含他人的个人数据。评估合作无需护照信息、特殊类别个人数据或生物识别数据。"
+  ],
+  "Назначение и правовые основания": [
+    "Scope and lawful bases",
+    "适用范围与法律依据"
+  ],
+  "Политика применяется к формам и кабинету на sgt-h.ru и cons.sgt-h.ru. Оператор обрабатывает данные в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных». Основание обработки данных из формы и регистрации — отдельное согласие субъекта. Если заключается договор или возникает обязанность по закону, применяются соответствующие самостоятельные основания обработки. Избыточные данные не запрашиваются.": [
+    "This policy covers forms and the portal on sgt-h.ru and cons.sgt-h.ru. The operator processes data under Russian Federal Law No. 152-FZ of 27 July 2006 “On Personal Data”. Processing of form and registration data is based on the individual's separate consent. Contracts or legal obligations may provide independent lawful bases. Excessive data is not requested.",
+    "本政策适用于 sgt-h.ru 和 cons.sgt-h.ru 上的表单及平台。处理者依据俄罗斯 2006 年 7 月 27 日第 152-ФЗ 号《个人数据》联邦法律处理数据。表单及注册数据的处理以个人单独作出的同意为依据。合同或法律义务可构成独立处理依据。不要求提供超出必要范围的数据。"
+  ],
+  "Цели и категории данных": [
+    "Purposes and data categories",
+    "目的与数据类别"
+  ],
+  "Цели: рассмотрение партнёрства и проверка представляемой компании, ответ на обращение, обсуждение сотрудничества, регистрация и обслуживание кабинета, предоставление доступа к предложениям и защита сайта. Категории субъектов: представители потенциальных и действующих партнёров и пользователи кабинета.": [
+    "Purposes are partnership assessment and company checks, replies to enquiries, cooperation discussions, registration and account administration, access to opportunities and website security. Data subjects are representatives of prospective and current partners and portal users.",
+    "处理目的包括评估合作及核查企业、回复咨询、洽谈合作、注册和维护账户、提供项目机会访问权限及保障网站安全。数据主体为潜在及现有合作伙伴的代表和平台用户。"
+  ],
+  "Обрабатываются имя, фамилия, должность и рабочие контакты представителя, если они предоставлены, сведения из комментария и анкеты; для кабинета — адрес входа, защищённый хеш пароля и статус компании. Технические данные включают сведения о запросах, сессии и подтверждении согласия. Пароли в открытом виде не сохраняются. Не передавайте паспортные данные, сведения о здоровье, биометрические данные и не относящиеся к цели сведения.": [
+    "Data includes representatives' names, job titles and work contacts where supplied, and information in messages and questionnaires; for the portal, sign-in email, protected password hash and company status. Technical data includes request, session and consent records. Plain-text passwords are not stored. Do not provide passport details, health information, biometric data or information unrelated to the purpose.",
+    "处理的数据包括自愿提供的代表姓名、职务和工作联系方式，以及留言和调查表中的信息；平台数据包括登录邮箱、受保护的密码哈希值及企业状态。技术数据包括请求、会话及同意记录。密码不以明文保存。请勿提供护照、健康、生物识别信息或与处理目的无关的数据。"
+  ],
+  "Порядок обработки и доступ": [
+    "Processing and access",
+    "处理方式与访问权限"
+  ],
+  "Обработка включает сбор, запись, систематизацию, накопление, хранение, уточнение, извлечение, использование, предоставление доступа уполномоченным лицам, блокирование, удаление и уничтожение. Анкеты хранятся в закрытой части системы; доступ к ним имеют уполномоченные сотрудники оператора. Персональные данные не публикуются и не продаются. Автоматизированные решения с юридическими последствиями и рекламные рассылки не предусмотрены.": [
+    "Operations include collection, recording, organisation, accumulation, storage, updating, retrieval, use, access for authorised persons, restriction, deletion and destruction. Questionnaires are stored privately and accessed by the operator's authorised employees. Personal data is not published or sold. Automated decisions with legal effects and advertising mailings are not provided.",
+    "处理操作包括收集、记录、整理、积累、保存、更新、检索、使用、向授权人员提供访问权限、限制处理、删除及销毁。调查表保存在非公开系统中，仅处理者授权员工可访问。个人数据不公开、不出售。不进行具有法律后果的自动化决策，也不发送广告邮件。"
+  ],
+  "Размещение и передача": [
+    "Hosting and disclosure",
+    "存储与传输"
+  ],
+  "Первичный сбор, запись, систематизация, накопление, хранение, уточнение и извлечение данных граждан РФ должны осуществляться с использованием баз данных в РФ. В рабочей конфигурации используются российский хостинг REG.RU и корпоративная почта. Поручение обработки поставщикам услуг допускается при соблюдении требований закона и договорных мер конфиденциальности и безопасности. Передача государственным органам возможна в предусмотренных законом случаях.": [
+    "Initial collection, recording, organisation, accumulation, storage, updating and retrieval of Russian citizens' data must use databases in Russia. The operational configuration uses Russian REG.RU hosting and corporate email. Service providers may process data subject to statutory requirements and contractual confidentiality and security safeguards. Disclosure to public authorities is possible where required by law.",
+    "对俄罗斯公民数据的初始收集、记录、整理、积累、保存、更新和检索必须使用俄罗斯境内数据库。正式配置使用俄罗斯 REG.RU 托管服务和企业邮箱。在符合法律要求并落实合同保密与安全措施的前提下，可委托服务供应商处理数据。法律规定的情况下可向国家机关提供数据。"
+  ],
+  "Трансграничная передача не разрешается одной лишь отметкой этой формы. Подключение зарубежных сервисов к анкетам или корпоративной почте требует отдельной проверки оснований и выполнения предусмотренных законом обязанностей оператором.": [
+    "Selecting this form's checkbox alone does not authorise cross-border transfers. Connecting foreign services to questionnaires or corporate email requires the operator to separately review lawful bases and fulfil statutory obligations.",
+    "仅勾选本表单复选框并不授权跨境传输。将调查表或企业邮箱连接至境外服务，须由处理者另行核查法律依据并履行法定义务。"
+  ],
+  "Сроки хранения и прекращение обработки": [
+    "Retention and termination",
+    "保存期限与终止处理"
+  ],
+  "Данные обращения хранятся до завершения рассмотрения и обсуждения сотрудничества; данные кабинета — пока аккаунт используется для заявленной цели. После достижения цели, отзыва согласия или выявления неправомерной обработки данные блокируются, удаляются или уничтожаются в сроки статьи 21 Федерального закона № 152-ФЗ, если иное законное основание не требует продолжения обработки. Сроки контролирует ответственное лицо оператора. Резервные копии имеют ограниченный доступ и удаляются в рамках установленного оператором цикла хранения.": [
+    "Enquiry data is kept until the review and cooperation discussions conclude; account data is kept while the account serves its stated purpose. Once the purpose is achieved, consent is withdrawn or unlawful processing is identified, data is restricted, deleted or destroyed within the periods set by Article 21 of Federal Law No. 152-FZ, unless another lawful basis requires continued processing. The operator's responsible person monitors these periods. Backups have restricted access and are deleted under the operator's retention cycle.",
+    "咨询数据保存至审查和合作洽谈结束；账户数据在账户用于既定目的期间保存。目的达成、同意撤回或发现违法处理后，除其他合法依据要求继续处理外，按照第 152-ФЗ 号联邦法律第 21 条规定的期限限制处理、删除或销毁数据。处理者指定负责人监督保存期限。备份实行访问限制，并按处理者规定的保存周期删除。"
+  ],
+  "Права и обращения": [
+    "Rights and enquiries",
+    "权利与申请"
+  ],
+  "Вы вправе получить сведения об обработке, потребовать уточнения, блокирования или уничтожения данных при наличии оснований, отозвать согласие и обжаловать действия оператора в Роскомнадзор или суд. Направьте обращение на электронную почту оператора с темой «Персональные данные» или по юридическому адресу. Для проверки обращения оператор может запросить сведения, необходимые для подтверждения личности; не отправляйте документы, удостоверяющие личность, через публичную форму сайта.": [
+    "You may request information about processing, seek correction, restriction or destruction where justified, withdraw consent and complain to Roskomnadzor or a court. Send requests to the operator's email with the subject “Personal data”, or to its registered address. The operator may request information needed to verify identity; do not submit identity documents through the public website form.",
+    "您有权了解处理情况，在有正当依据时要求更正、限制处理或销毁数据，撤回同意，并向俄罗斯通信、信息技术和大众传媒监督局或法院投诉。可向处理者邮箱发送主题为“个人数据”的申请，或寄送至法定地址。处理者可要求核验身份所必需的信息；请勿通过网站公开表单提交身份证明文件。"
+  ],
+  "Защита и служебные cookie": [
+    "Security and essential cookies",
+    "安全措施与必要 Cookie"
+  ],
+  "Применяются разграничение доступа, HTTPS, закрытое хранение анкет, хеширование паролей и защита форм от подделки запросов. Служебные cookie нужны для входа (до 7 дней) и защиты форм. Рекламные и аналитические cookie не устанавливаются. Язык страницы передаётся в адресе сайта. Оператор принимает правовые, организационные и технические меры, предусмотренные законодательством, и организует реагирование на инциденты.": [
+    "Measures include access controls, HTTPS, private questionnaire storage, password hashing and protection against forged form requests. Essential cookies support sign-in (up to 7 days) and form security. Advertising and analytics cookies are not set. The page language is included in the URL. The operator implements statutory legal, organisational and technical safeguards and incident response procedures.",
+    "安全措施包括访问控制、HTTPS、调查表非公开存储、密码哈希及防伪造请求保护。必要 Cookie 用于登录（最长 7 天）和表单安全。不设置广告或分析 Cookie。页面语言通过网址参数传递。处理者实施法律要求的法律、组织和技术措施，并组织事件响应。"
+  ],
+  "Отдельное согласие на обработку персональных данных": [
+    "Separate consent to personal data processing",
+    "独立的个人数据处理同意书"
+  ],
+  "Русская редакция является исходной. Переводы предоставлены для удобства ознакомления.": [
+    "The Russian version is the original. Translations are provided for convenience.",
+    "俄文版为原文，译文仅供阅读参考。"
+  ],
+  "Акционерное общество «СГТХОЛДИНГ»": [
+    "SGT HOLDING Joint Stock Company",
+    "SGT HOLDING 股份公司"
+  ],
+  "109542, г. Москва, вн. тер. г. муниципальный округ Выхино-Жулебино, пр-кт Рязанский, д. 91, к. 1, помещ. 11Н": [
+    "Room 11N, Building 1, 91 Ryazansky Prospekt, Vykhino-Zhulebino Municipal District, Moscow, 109542, Russia",
+    "俄罗斯莫斯科市维希诺-茹列比诺市辖区梁赞大街 91 号 1 栋 11Н 室，邮编 109542"
+  ],
+  "Не удалось выполнить запрос. Попробуйте позже.": [
+    "The request could not be completed. Please try again later.",
+    "请求未能完成，请稍后重试。"
+  ],
+  "СГТ-Холдинг — объединяя компетенции": [
+    "SGT Holding — uniting expertise",
+    "SGT Holding — 汇聚专业能力"
+  ],
+  "СГТ-Холдинг. Консорциум строительных компаний и геологическое направление. Объединяем компетенции для строительных, промышленных и инфраструктурных проектов.": [
+    "SGT Holding. A construction consortium and geological services. Uniting expertise for construction, industrial and infrastructure projects.",
+    "SGT Holding：建筑企业联合体与地质业务。汇聚专业能力，服务建筑、工业及基础设施项目。"
+  ],
+  "Язык сайта": [
+    "Website language",
+    "网站语言"
+  ],
+  "Русский": [
+    "Russian",
+    "俄语"
+  ],
+  "Неверный email или пароль.": [
+    "Incorrect email or password.",
+    "邮箱或密码错误。"
+  ],
+  "Неверный адрес или пароль.": [
+    "Incorrect email or password.",
+    "邮箱或密码错误。"
+  ],
+  "Обновите страницу и повторите отправку.": [
+    "Refresh the page and submit again.",
+    "请刷新页面后重新提交。"
+  ],
+  "Обновите страницу и подтвердите актуальное согласие на обработку данных.": [
+    "Refresh the page and confirm the current personal data consent.",
+    "请刷新页面并确认最新的个人数据处理同意书。"
+  ],
+  "Этот адрес уже зарегистрирован.": [
+    "This email is already registered.",
+    "此邮箱已注册。"
+  ],
+  "Не удалось зарегистрировать этот адрес. Войдите или свяжитесь с координатором.": [
+    "Could not register this email. Sign in or contact the coordinator.",
+    "无法使用此邮箱注册，请登录或联系协调人。"
+  ],
+  "Проверьте поля формы.": [
+    "Please check the form fields.",
+    "请检查表单字段。"
+  ],
+  "Проверьте адрес электронной почты.": [
+    "Please check your email address.",
+    "请检查邮箱地址。"
+  ],
+  "Проверьте ИНН.": [
+    "Please check the Russian tax ID.",
+    "请检查俄罗斯纳税人识别号。"
+  ],
+  "Пароль должен содержать от 12 до 128 символов.": [
+    "The password must contain 12 to 128 characters.",
+    "密码长度须为 12 至 128 个字符。"
+  ],
+  "Содержимое файла не соответствует формату DOCX или PDF.": [
+    "The file content does not match DOCX or PDF format.",
+    "文件内容与 DOCX 或 PDF 格式不符。"
+  ],
+  "Слишком много запросов. Попробуйте позже.": [
+    "Too many requests. Please try again later.",
+    "请求过多，请稍后重试。"
+  ],
+  "Заполните обязательные поля, приложите анкету и подтвердите согласие.": [
+    "Complete the required fields, attach the questionnaire and confirm consent.",
+    "请填写必填项、附上调查表并确认同意。"
+  ],
+  "Проверьте поля. Пароль должен содержать от 12 до 128 символов; необходимо согласие на обработку данных.": [
+    "Check the fields. The password must contain 12 to 128 characters, and the current personal data consent is required. Refresh the page if necessary.",
+    "请检查表单。密码须为 12 至 128 个字符，且须确认最新的个人数据处理同意书；必要时请刷新页面。"
+  ]
+}

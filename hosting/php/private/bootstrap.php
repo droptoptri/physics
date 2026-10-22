@@ -4,8 +4,12 @@ declare(strict_types=1);
 umask(0077);
 ini_set('display_errors', '0');
 date_default_timezone_set('UTC');
-const RECIPIENT = 'antnpk@gmail.com';
-const CONSENT = '2026-10-18-v1';
+const RECIPIENT = 'ok@sgt-h.ru';
+const CONSENT = '2026-10-22-v2';
+function checked_consent(array $data): string {
+    if (($data['consentVersion'] ?? '')!==CONSENT || !in_array($data['consentLocale'] ?? '',['ru','en','zh'],true))fail('Обновите страницу и подтвердите актуальное согласие на обработку данных.');
+    return CONSENT.':'.$data['consentLocale'];
+}
 function private_dir(): string { return __DIR__; }
 function secure_request(): bool {
     return (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || ($_SERVER['SERVER_PORT'] ?? '') == 443 || ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https';

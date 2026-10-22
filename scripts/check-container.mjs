@@ -42,11 +42,11 @@ try {
   const cookie=csrf.headers.getSetCookie().map(s=>s.split(';')[0]).join('; ')
   assert.match(csrf.headers.get('set-cookie'), /; Secure/)
   const headers={Origin:'https://sgt-test.example',Cookie:cookie,'X-CSRF-Token':token}
-  const registration=await fetch(`${base}/api/auth/register`,{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify({email:'container@example.com',password:'Container-check-password-2026',company:'Container check',name:'Test Partner',consent:true})})
+  const registration=await fetch(`${base}/api/auth/register`,{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify({email:'container@example.com',password:'Container-check-password-2026',company:'Container check',name:'Test Partner',consent:true,consentVersion:'2026-10-22-v2',consentLocale:'en'})})
   assert.equal(registration.status,201)
   const session=registration.headers.getSetCookie().map(s=>s.split(';')[0]).join('; ')
   const form=new FormData()
-  for(const [key,value] of Object.entries({company:'Container check',name:'Test Partner',email:'container@example.com',inn:'',message:'Container persistence check',consent:'true',website:''}))form.set(key,value)
+  for(const [key,value] of Object.entries({company:'Container check',name:'Test Partner',email:'container@example.com',inn:'',message:'Container persistence check',consent:'true',consentVersion:'2026-10-22-v2',consentLocale:'en',website:''}))form.set(key,value)
   form.set('questionnaire',new Blob([readFileSync('public/documents/sgt-partner-questionnaire.docx')]),'questionnaire.docx')
   const upload=await fetch(`${base}/api/applications`,{method:'POST',headers,body:form})
   assert.equal(upload.status,202)

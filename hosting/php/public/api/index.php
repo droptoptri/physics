@@ -21,7 +21,8 @@ try {
         $email=email_value($data['email'] ?? null);$password=password_value($data['password'] ?? null);
         $company=clean_text($data['company'] ?? null,2,200);$name=clean_text($data['name'] ?? null,2,120);
         if (($data['consent'] ?? false)!==true)fail('Подтвердите согласие на обработку данных.');
-        try { query('INSERT INTO sgt_users(email,company,name,password_hash,consent_version) VALUES(?,?,?,?,?)',[$email,$company,$name,password_digest($password),CONSENT]); }
+        $consent=checked_consent($data);
+        try { query('INSERT INTO sgt_users(email,company,name,password_hash,consent_version) VALUES(?,?,?,?,?)',[$email,$company,$name,password_digest($password),$consent]); }
         catch(PDOException $error) { if ($error->getCode()==='23000')fail('Этот адрес уже зарегистрирован.',409);throw $error; }
         $id=(int)database()->lastInsertId();sign_in($id);
         json_response(['user'=>public_user(query('SELECT * FROM sgt_users WHERE id=?',[$id])->fetch())],201);
@@ -38,6 +39,7 @@ try {
         $inn=clean_text($_POST['inn'] ?? '',0,12);$message=clean_text($_POST['message'] ?? '',0,3000);
         if ($inn!=='' && !preg_match('/^(?:[0-9]{10}|[0-9]{12})$/D',$inn))fail('Проверьте ИНН.');
         if (($_POST['consent'] ?? '')!=='true' || ($_POST['website'] ?? '')!=='')fail('Подтвердите согласие и проверьте форму.');
+        $consent=checked_consent($_POST);
         $file=$_FILES['questionnaire'] ?? null;
         if (!$file || !is_string($file['name'] ?? null) || ($file['error'] ?? UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK || (int)$file['size']>10*1024*1024 || (int)$file['size']===0 || !is_uploaded_file($file['tmp_name']))fail('Загрузите один файл DOCX или PDF размером до 10 МБ.');
         $extension=strtolower(pathinfo($file['name'],PATHINFO_EXTENSION));$type=(new finfo(FILEINFO_MIME_TYPE))->file($file['tmp_name']);
@@ -47,7 +49,7 @@ try {
         if (!is_dir(dirname($destination)) && !mkdir(dirname($destination),0700,true))throw new RuntimeException('Cannot create private upload directory');
         if (!move_uploaded_file($file['tmp_name'],$destination))throw new RuntimeException('Cannot store attachment');
         chmod($destination,0600);
-        try { query('INSERT INTO sgt_applications(id,company,name,email,inn,message,filename,consent_version) VALUES(?,?,?,?,?,?,?,?)',[$id,$company,$name,$email,$inn,$message,$filename,CONSENT]); }
+        try { query('INSERT INTO sgt_applications(id,company,name,email,inn,message,filename,consent_version) VALUES(?,?,?,?,?,?,?,?)',[$id,$company,$name,$email,$inn,$message,$filename,$consent]); }
         catch(Throwable $error) { unlink($destination);throw $error; }
         json_response(['id'=>$id,'status'=>'queued','mailEnabled'=>mail_enabled()],202);
     }
