@@ -2,6 +2,7 @@ import { defineConfig, devices } from '@playwright/test'
 import { existsSync } from 'node:fs'
 export default defineConfig({
   testDir: './tests', testMatch: '*.pages.spec.ts', workers: 1,
+  outputDir: 'test-results/pages',
   use: {
     baseURL: 'http://localhost:3102',
     launchOptions: { executablePath: process.env.CHROMIUM_PATH || (existsSync('/usr/bin/chromium') ? '/usr/bin/chromium' : undefined), args: ['--no-sandbox'] },

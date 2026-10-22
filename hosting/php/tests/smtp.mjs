@@ -22,7 +22,7 @@ const server=tls.createServer({key:fs.readFileSync('/fixtures/server.key'),cert:
       if(/^EHLO|^HELO/.test(line))socket.write('250-sgt-smtp\r\n250-AUTH LOGIN\r\n250 SIZE 15000000\r\n')
       else if(/^AUTH LOGIN/.test(line)){auth=1;socket.write('334 VXNlcm5hbWU6\r\n')}
       else if(/^MAIL FROM:/.test(line))socket.write('250 sender ok\r\n')
-      else if(/^RCPT TO:/.test(line)){recipient=line.slice(8).replace(/[<>]/g,'').trim();socket.write(recipient==='antnpk@gmail.com'?'250 recipient ok\r\n':'550 unexpected test recipient\r\n')}
+      else if(/^RCPT TO:/.test(line)){recipient=line.slice(8).replace(/[<>]/g,'').trim();socket.write(recipient==='ok@sgt-h.ru'?'250 recipient ok\r\n':'550 unexpected test recipient\r\n')}
       else if(line==='DATA'){data=true;socket.write('354 end with dot\r\n')}
       else if(line==='QUIT'){socket.end('221 goodbye\r\n')}
       else socket.write('250 ok\r\n')

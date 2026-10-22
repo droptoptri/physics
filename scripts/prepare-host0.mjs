@@ -12,6 +12,7 @@ cpSync('hosting/php/composer.lock',`${destination}/sgt-private/composer.lock`)
 cpSync('hosting/php/tests/router.php',`${destination}/router.php`)
 cpSync('docs/REG-RU.md',`${destination}/ИНСТРУКЦИЯ.md`)
 cpSync('docs/MAIL.md',`${destination}/MAIL.md`)
+cpSync('docs/UPDATE-2026-10.md',`${destination}/ОБНОВЛЕНИЕ.md`)
 writeFileSync(`${destination}/README.txt`,'Сайт для sgt-h.ru, REG.RU Хост-0.\n\nСодержимое sgt-h.ru загрузите в корень сайта sgt-h.ru, включая .htaccess и .user.ini.\nПапку sgt-private разместите РЯДОМ с папкой сайта, за пределами его корня.\nНЕ загружайте sgt-private внутрь public.\nСоздайте в sgt-private файл install-password.txt со своим уникальным паролем от 20 символов, затем откройте https://sgt-h.ru/setup.\nПодробно: https://github.com/droptoptri/physics/blob/main/docs/REG-RU.md\n')
 // Public assets must be readable by the hosting web server after ZIP extraction.
 function publicPermissions(path) {
@@ -33,5 +34,18 @@ with zipfile.ZipFile('releases/sgt-host0.zip','w',zipfile.ZIP_DEFLATED) as z:
    relative=p.relative_to(root)
    if relative.parts[0]=='public': relative=Path('sgt-h.ru',*relative.parts[1:])
    z.write(p,relative)
+
+# The update overlays application files only. Never replace the private directory.
+with zipfile.ZipFile('releases/sgt-host0-update.zip','w',zipfile.ZIP_DEFLATED) as z:
+ for p in sorted(root.rglob('*')):
+  if not p.is_file(): continue
+  relative=p.relative_to(root)
+  if relative.parts[0]=='public':
+   if p.name=='setup.php': continue
+   relative=Path('sgt-h.ru',*relative.parts[1:])
+  elif relative.parts[0]=='sgt-private':
+   if len(relative.parts)!=2 or p.name not in ['bootstrap.php','schema.php','mail.php','cron.php','.htaccess']: continue
+  elif p.name!='ОБНОВЛЕНИЕ.md': continue
+  z.write(p,relative)
 `],{stdio:'inherit'})
 console.log('Prepared releases/sgt-host0.zip. No passwords, user data or default accounts are bundled.')

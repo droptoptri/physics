@@ -1,19 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import '@fontsource/manrope/cyrillic-400.css'
-import '@fontsource/manrope/cyrillic-500.css'
-import '@fontsource/manrope/cyrillic-600.css'
-import '@fontsource/manrope/cyrillic-700.css'
-import '@fontsource/manrope/cyrillic-800.css'
-import '@fontsource/manrope/latin-400.css'
-import '@fontsource/manrope/latin-500.css'
-import '@fontsource/manrope/latin-600.css'
-import '@fontsource/manrope/latin-700.css'
-import '@fontsource/manrope/latin-800.css'
-import App from './App'
-import { isPreview } from './site'
-import './styles.css'
-
-if (isPreview) document.documentElement.classList.add('site-preview')
-
-ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>{isPreview && <div className="preview-banner" role="note"><strong>Тестовая версия</strong><span>Можно проверить интерфейс. Заявки и пароли не отправляются.</span></div>}<App /></React.StrictMode>)
+import { tr } from './i18n'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import '@fontsource/manrope/cyrillic-400.css';
+import '@fontsource/manrope/cyrillic-500.css';
+import '@fontsource/manrope/cyrillic-600.css';
+import '@fontsource/manrope/cyrillic-700.css';
+import '@fontsource/manrope/cyrillic-800.css';
+import '@fontsource/manrope/latin-400.css';
+import '@fontsource/manrope/latin-500.css';
+import '@fontsource/manrope/latin-600.css';
+import '@fontsource/manrope/latin-700.css';
+import '@fontsource/manrope/latin-800.css';
+import App from './App';
+import { isPreview } from './site';
+import './styles.css';
+if (isPreview)
+    document.documentElement.classList.add('site-preview');
+ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>{isPreview && <div className="preview-banner" role="note"><strong>{tr("Тестовая версия")}</strong><span>{tr("Можно проверить интерфейс. Заявки и пароли не отправляются.")}</span></div>}<App /></React.StrictMode>);

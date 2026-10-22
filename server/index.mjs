@@ -26,11 +26,11 @@ app.use((req,res,next)=>{
   if(/(?:^|\/)(?:var|\.git|\.env(?:\.[^/]*)?)(?:\/|$)/i.test(path) || path.includes(store.dataDir) || /\.sqlite(?:-|$)/i.test(path))return res.status(404).end()
   next()
 })
-app.get('/',(req,res,next)=>req.hostname.toLowerCase()===consortiumHost?res.redirect(302,'/ksk'):next())
+app.get('/',(req,res,next)=>req.hostname.toLowerCase()===consortiumHost?res.redirect(302,`/ksk${['en','zh'].includes(req.query.lang)?`?lang=${req.query.lang}`:''}`):next())
 if(production || process.env.SERVE_DIST==='true') {
   if(!existsSync(resolve('dist/index.html'))) throw new Error('Run npm run build first')
   app.use(express.static(resolve('dist'),{index:false,maxAge:0}))
-  app.get(['/', '/ksk', '/geo', '/cabinet', '/privacy'],(_req,res)=>res.sendFile(resolve('dist/index.html')))
+  app.get(['/', '/ksk', '/geo', '/cabinet', '/privacy', '/consent'],(_req,res)=>res.sendFile(resolve('dist/index.html')))
   app.use((_req,res)=>res.status(404).send('Страница не найдена'))
 }else{
   const {createServer}=await import('vite')

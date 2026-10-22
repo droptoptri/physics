@@ -30,10 +30,10 @@ async function setup(t, options={}) {
   }
   return {store,request,base,getCookie:()=>cookie}
 }
-const account={email:'partner@example.com',password:'a-long-test-password-2026',name:'Иван Иванов',company:'ООО Тест',consent:true}
+const account={email:'partner@example.com',password:'a-long-test-password-2026',name:'Иван Иванов',company:'ООО Тест',consent:true,consentVersion:'2026-10-22-v2',consentLocale:'ru'}
 function form(file=readFileSync(new URL('../public/documents/sgt-partner-questionnaire.docx',import.meta.url)),filename='anketa.docx'){
   const data=new FormData()
-  for(const [k,v]of Object.entries({company:'ООО Тест',name:'Иван Иванов',email:'partner@example.com',inn:'1234567890',message:'Тестовая заявка',consent:'true',website:''}))data.set(k,v)
+  for(const [k,v]of Object.entries({company:'ООО Тест',name:'Иван Иванов',email:'partner@example.com',inn:'1234567890',message:'Тестовая заявка',consent:'true',consentVersion:'2026-10-22-v2',consentLocale:'ru',website:''}))data.set(k,v)
   data.set('questionnaire',new Blob([file]),filename)
   return data
 }
@@ -91,7 +91,7 @@ test('real DOCX questionnaire is stored privately, queued and delivered to the s
   assert.ok(readFileSync(row.stored_path).length>1000)
   let captured
   await createMailWorker(store,{sendMail:async message=>{captured=message}}).flush()
-  assert.equal(captured.to,'antnpk@gmail.com')
+  assert.equal(captured.to,'ok@sgt-h.ru')
   assert.equal(captured.replyTo.address,'partner@example.com')
   assert.equal(captured.attachments.length,1)
   assert.equal(captured.attachments[0].path,row.stored_path)
@@ -178,4 +178,20 @@ test('persistent database can be reopened repeatedly without losing accounts or 
   assert.ok(checkPassword('persistent-secure-password',user.password))
   store.db.close();store=openStore(directory)
   assert.equal(store.db.prepare('SELECT count(*) n FROM users').get().n,1)
+})
+
+test('current standalone consent version and language are required and stored without changing old records',async t=>{
+  const {store,request}=await setup(t)
+  for(const consentVersion of [undefined,'2026-10-18-v1']){
+    assert.equal((await request('/api/auth/register',{method:'POST',body:{...account,consentVersion}})).status,400)
+    const f=form();if(consentVersion)f.set('consentVersion',consentVersion);else f.delete('consentVersion')
+    assert.equal((await request('/api/applications',{method:'POST',body:f})).status,400)
+  }
+  assert.equal((await request('/api/auth/register',{method:'POST',body:{...account,consentLocale:'xx'}})).status,400)
+  assert.equal((await request('/api/auth/register',{method:'POST',body:{...account,consentLocale:'en'}})).status,201)
+  assert.equal(store.db.prepare('SELECT consent_version FROM users').get().consent_version,'2026-10-22-v2:en')
+  const f=form();f.set('consentLocale','zh')
+  assert.equal((await request('/api/applications',{method:'POST',body:f})).status,202)
+  const row=store.db.prepare('SELECT consent_version,created_at FROM applications').get()
+  assert.equal(row.consent_version,'2026-10-22-v2:zh');assert.ok(row.created_at)
 })

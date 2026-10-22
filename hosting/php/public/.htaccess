@@ -18,7 +18,7 @@ RewriteRule ^(?:sgt-private|\.git|\.env|var|vendor|backups)(?:/|$) - [R=404,L,NC
 RewriteRule ^api(?:/.*)?$ api/index.php [END,QSA]
 RewriteRule ^admin/?$ admin.php [L]
 RewriteRule ^setup/?$ setup.php [L]
-RewriteRule ^(?:ksk|geo|cabinet|privacy)/?$ index.html [L]
+RewriteRule ^(?:ksk|geo|cabinet|privacy|consent)/?$ index.html [L]
 <FilesMatch "^\.">
   Require all denied
 </FilesMatch>

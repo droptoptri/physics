@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process'
-import { mkdtempSync, writeFileSync, readFileSync, rmSync, chmodSync } from 'node:fs'
+import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync, chmodSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { resolve, join } from 'node:path'
 import { randomBytes } from 'node:crypto'
@@ -40,12 +40,15 @@ try{
  execFileSync('openssl',['x509','-req','-in',join(folder,'server.csr'),'-CA',join(folder,'ca.crt'),'-CAkey',join(folder,'ca.key'),'-CAcreateserial','-days','1','-out',join(folder,'server.crt'),'-extfile',join(folder,'extensions.txt')],{stdio:'ignore'})
  writeFileSync(join(folder,'test.ini'),'openssl.cafile=/fixtures/ca.crt\n')
  chmodSync(folder,0o755);chmodSync(join(folder,'ca.crt'),0o644);chmodSync(join(folder,'test.ini'),0o644)
+ // Persist attachments on the host temp filesystem, outside Docker's limited overlay.
+ mkdirSync(join(folder,'uploads'),{mode:0o700})
  docker('network','create',network)
  docker('run','-d','--name',db,'--network',network,'--network-alias','db','--env-file',join(folder,'db.env'),'mariadb:11')
  await waitFor(()=>docker('exec',db,'healthcheck.sh','--connect','--innodb_initialized').includes(''))
  docker('run','-d','--name',smtp,'--network',network,'--network-alias','sgt-smtp','--mount',`type=bind,source=${folder},target=/fixtures,readonly`,'--mount',`type=bind,source=${resolve('hosting/php/tests/smtp.mjs')},target=/test-smtp.mjs,readonly`,'-p','127.0.0.1::8025','node:24-bookworm-slim','node','/test-smtp.mjs')
  const mailBase=`http://127.0.0.1:${docker('port',smtp,'8025/tcp').split(':').at(-1)}`
- docker('run','-d','--name',web,'--network',network,'--env','SGT_TEST_ORIGIN=http://localhost:3105','--mount',`type=volume,source=${volume},target=/site/sgt-private`,'--mount',`type=bind,source=${folder},target=/fixtures,readonly`,'--mount',`type=bind,source=${join(folder,'test.ini')},target=/usr/local/etc/php/conf.d/sgt-test.ini,readonly`,'-p','127.0.0.1:3105:80',image)
+ docker('run','-d','--name',web,'--network',network,'--env','SGT_TEST_ORIGIN=http://localhost:3105','--mount',`type=volume,source=${volume},target=/site/sgt-private`,'--mount',`type=bind,source=${join(folder,'uploads')},target=/site/sgt-private/uploads`,'--mount',`type=bind,source=${folder},target=/fixtures,readonly`,'--mount',`type=bind,source=${join(folder,'test.ini')},target=/usr/local/etc/php/conf.d/sgt-test.ini,readonly`,'-p','127.0.0.1:3105:80',image)
+ docker('exec',web,'chown','www-data:www-data','/site/sgt-private/uploads')
  await waitFor(async()=> (await admin('/setup')).status===200)
  execFileSync('docker',['exec','-i','--user','www-data',web,'php','-r',"file_put_contents('/site/sgt-private/install-password.txt',stream_get_contents(STDIN));"],{input:installKey,stdio:['pipe','pipe','pipe']})
  let csrf=await formToken(admin,'/setup')
@@ -63,16 +66,19 @@ try{
  const redirect=await new Promise((resolve,reject)=>get(base,{headers:{Host:'cons.sgt-h.ru','X-Forwarded-Proto':'https'}},r=>{r.resume();resolve({status:r.statusCode,location:r.headers.location})}).on('error',reject))
  assert.equal(redirect.status,302);assert.equal(redirect.location,'https://cons.sgt-h.ru/ksk')
  assert.equal((await guest('/geo')).status,200)
+ assert.equal((await guest('/consent?lang=zh')).status,200)
  verify('Apache routes, consortium redirect and private-file protection work')
  const tokenResponse=await partner('/api/csrf'), token=(await tokenResponse.json()).token
  assert.match(tokenResponse.headers.get('set-cookie'),/; secure/i)
- const authBody={email:'partner@example.com',password:'Partner-check-password-2026',company:'Тестовая компания',name:'Тестовый Партнёр',consent:true}
+ const authBody={email:'partner@example.com',password:'Partner-check-password-2026',company:'Тестовая компания',name:'Тестовый Партнёр',consent:true,consentVersion:'2026-10-22-v2',consentLocale:'en'}
  const post=(path,data,headers={})=>partner(path,{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':token,...headers},body:JSON.stringify(data)})
  assert.equal((await post('/api/auth/register',authBody,{'X-CSRF-Token':'wrong'})).status,403)
  assert.equal((await post('/api/auth/register',authBody,{Origin:'https://evil.example'})).status,403)
  assert.equal((await post('/api/auth/register',{...authBody,consent:false})).status,400)
+ assert.equal((await post('/api/auth/register',{...authBody,consentVersion:'2026-10-18-v1'})).status,400)
  let registered=await post('/api/auth/register',authBody);assert.equal(registered.status,201)
  const partnerId=(await registered.json()).user.id
+ assert.equal(php("require '/site/sgt-private/bootstrap.php';echo query('SELECT consent_version FROM sgt_users WHERE is_admin=0')->fetchColumn();"),'2026-10-22-v2:en')
  assert.equal((await post('/api/auth/register',authBody)).status,409)
  assert.equal((await partner('/api/tenders')).status,403)
  verify('registration enforces CSRF, origin, consent, unique email and pending access')
@@ -87,7 +93,7 @@ try{
  assert.equal((await partner('/api/tenders')).status,401)
  verify('administrator approval, publication, closing and revocation protect tender access')
  const upload=async(buffer,name='questionnaire.docx')=>{
-  const form=new FormData();for(const[k,v]of Object.entries({company:'PHP test company',name:'Test Partner',email:'file@example.com',inn:'',message:'<script>alert(1)</script>\nTest message',website:'',consent:'true'}))form.set(k,v)
+  const form=new FormData();for(const[k,v]of Object.entries({company:'PHP test company',name:'Test Partner',email:'file@example.com',inn:'',message:'<script>alert(1)</script>\nTest message',website:'',consent:'true',consentVersion:'2026-10-22-v2',consentLocale:'zh'}))form.set(k,v)
   form.set('questionnaire',new Blob([buffer]),name)
   return partner('/api/applications',{method:'POST',headers:{'X-CSRF-Token':token},body:form})
  }
@@ -97,6 +103,7 @@ try{
  let uploaded=await upload(original)
  assert.equal(uploaded.status,202)
  const application=await uploaded.json();assert.equal(application.mailEnabled,false)
+ assert.equal(php("require '/site/sgt-private/bootstrap.php';echo query('SELECT consent_version FROM sgt_applications')->fetchColumn();"),'2026-10-22-v2:zh')
  assert.equal(php("require '/site/sgt-private/bootstrap.php';echo query('SELECT COUNT(*) FROM sgt_applications')->fetchColumn();"),'1')
  assert.equal((await guest(`/admin?download=${application.id}`)).status,404)
  const attachment=await admin(`/admin?download=${application.id}`);assert.equal(attachment.status,200);assert.deepEqual(Buffer.from(await attachment.arrayBuffer()),original)
@@ -108,7 +115,7 @@ try{
  assert.equal(php("require '/site/sgt-private/bootstrap.php';echo query('SELECT attempts FROM sgt_applications')->fetchColumn();"),'1')
  await fetch(mailBase,{method:'POST',body:JSON.stringify({fail:false})})
  await adminPost('send_queue')
- const received=await (await fetch(mailBase)).json();assert.equal(received.messages.length,1);assert.equal(received.messages[0].recipient,'antnpk@gmail.com');assert.match(received.messages[0].message,/filename="?anketa-/)
+ const received=await (await fetch(mailBase)).json();assert.equal(received.messages.length,1);assert.equal(received.messages[0].recipient,'ok@sgt-h.ru');assert.match(received.messages[0].message,/filename="?anketa-/)
  assert.equal(php("require '/site/sgt-private/bootstrap.php';echo query('SELECT status FROM sgt_applications')->fetchColumn();"),'sent')
  verify('SMTP uses a trusted TLS certificate, retries a failure and attaches the original questionnaire to the fixed recipient')
  browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH || (existsSync('/usr/bin/chromium')?'/usr/bin/chromium':undefined),args:['--no-sandbox']})
@@ -132,6 +139,8 @@ try{
 }catch(error){try{execFileSync('docker',['logs','--tail','30',web],{stdio:'inherit'})}catch{}throw error}
 finally{
  if(browser)await browser.close()
+ // Make only this test's temporary upload directory removable by the host test user.
+ try{docker('exec',web,'chmod','0777','/site/sgt-private/uploads')}catch{}
  for(const name of [web,smtp,db])try{docker('rm','-fv',name)}catch{}
  try{docker('volume','rm',volume)}catch{}
  try{docker('network','rm',network)}catch{}
