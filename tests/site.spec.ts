@@ -153,7 +153,7 @@ for(const language of ['en','zh'] as const){
     const pdf=await request.get((await download.getAttribute('href'))!)
     expect(Buffer.from(await pdf.body())).toEqual(readFileSync('public/documents/SGT_GEO_Updated_2026.pdf'))
     await expect(geo.getByText(language==='en'?'Further information on completed projects and studies is available upon additional request.':'有关已完成项目及研究的详细信息，可另行提出请求获取。')).toBeVisible()
-    await expect(page.locator('.contact-channels>a')).toHaveAttribute('href','mailto:ok@sgt-h.ru')
+    await expect(page.locator('.contact-channels>a')).toHaveAttribute('href','mailto:info@sgt-h.ru')
     await expect(page.locator('.metric-source')).toHaveCount(0)
     const languageLinks=page.locator('.site-header .language-switcher')
     await expect(languageLinks.getByRole('link',{name:language==='en'?'English':'简体中文',exact:true})).toHaveAttribute('aria-current','true')
